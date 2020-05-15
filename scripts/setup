@@ -1,0 +1,22 @@
+#!/bin/bash
+
+dtf=$HOME/dotfiles
+rm "$HOME/.spacemacs"
+ln -s "$dtf/.spacemacs" "$HOME/.spacemacs"
+rm "$HOME/.zshrc"
+ln -s "$dtf/.zshrc" "$HOME/.zshrc"
+rm "$HOME/.zshenv"
+ln -s "$dtf/.zshenv" "$HOME/.zshenv"
+rm "$HOME/.svn-global-ignore"
+ln -s "$dtf/.svn-global-ignore" "$HOME/.svn-global-ignore"
+rm "$HOME/.gitignore_global"
+ln -s "$dtf/.gitignore_global" "$HOME/.gitignore_global"
+rm "$HOME/.oh-my-zsh/custom/aliases.zsh"
+ln -s "$dtf/aliases.zsh" "$HOME/.oh-my-zsh/custom/aliases.zsh"
+rm "$HOME/.oh-my-zsh/custom/themes/bashful.zsh-theme"
+ln -s "$dtf/bashful.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/bashful.zsh-theme"
+rm "$HOME/.config/gtk-3.0/gtk.css"
+ln -s "$dtf/gtk.css" "$HOME/.config/gtk-3.0/gtk.css"
+rm "$HOME/.xinitrc"
+ln -s "$dtf/xinitrc" "$HOME/.xinitrc"
+ln -sf "$dtf/svn-config" "$HOME/.subversion/config"

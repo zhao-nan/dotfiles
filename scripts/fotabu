@@ -1,0 +1,11 @@
+#!/bin/bash
+
+printf -v d '%(%Y-%m-%d)T' -1
+file="${d}.md"
+cd $HOME/ftb
+if [[ ! -e $file ]] ; then
+   touch $file
+   echo "# ${d}" >> $file
+fi
+
+ec $file
