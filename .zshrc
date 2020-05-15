@@ -1,6 +1,5 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -51,22 +50,6 @@ bindkey '^e' edit-command-line
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# fd - cd to selected directory
-fd() {
-    local dir
-    dir=$(find ${1:-.} -path '*/\.*' -prune \
-               -o -type d -print 2> /dev/null | fzf +m) &&
-        cd "$dir"
-}
-
-# cf - fuzzy cd from anywhere
-# ex: cf word1 word2 ... (even part of a file name)
-# zsh autoload function
-cf() {
-    cd
-    fd
-}
-
 # fuzzy autocompletion
 # 0 -- vanilla completion (abc => abc)
 # # 1 -- smart case completion (abc => Abc)
@@ -77,4 +60,5 @@ zstyle ':completion:*' matcher-list '' \
        'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
        'r:|?=** m:{a-z\-}={A-Z\_}'
 
+source $ZSH/oh-my-zsh.sh
 source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
