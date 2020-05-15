@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -18,7 +19,7 @@ DISABLE_UPDATE_PROMPT="true"
 # DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -48,7 +49,32 @@ bindkey -v
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-source $ZSH/oh-my-zsh.sh
-source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# fd - cd to selected directory
+fd() {
+    local dir
+    dir=$(find ${1:-.} -path '*/\.*' -prune \
+               -o -type d -print 2> /dev/null | fzf +m) &&
+        cd "$dir"
+}
+
+# cf - fuzzy cd from anywhere
+# ex: cf word1 word2 ... (even part of a file name)
+# zsh autoload function
+cf() {
+    cd
+    fd
+}
+
+# fuzzy autocompletion
+# 0 -- vanilla completion (abc => abc)
+# # 1 -- smart case completion (abc => Abc)
+# # 2 -- word flex completion (abc => A-big-Car)
+# # 3 -- full flex completion (abc => ABraCadabra)
+zstyle ':completion:*' matcher-list '' \
+       'm:{a-z\-}={A-Z\_}' \
+       'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
+       'r:|?=** m:{a-z\-}={A-Z\_}'
+
+source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
