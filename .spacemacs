@@ -325,8 +325,10 @@ you should place your code here."
   (setq-default fill-column 100)
   ;; no default tex master file
   (setq-default TeX-master nil)
-  ;; set default pdf viewer to zathura
-  (setq TeX-view-program-list '(("zathura" "zathura --page=%(outpage) %o")))
+  ;; set default pdf viewer to system default
+  (with-eval-after-load 'tex
+    (add-to-list 'TeX-view-program-selection
+                 '(output-pdf "xdg-open")))
   ;; follow symlinks in version-controlled folders
   (setq vc-follow-symlinks t)
   (setq TeX-save-query nil)
