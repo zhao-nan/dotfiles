@@ -59,7 +59,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(terminal-here)
+   dotspacemacs-additional-packages '(terminal-here openwith)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -336,6 +336,10 @@ you should place your code here."
   ;; enable opening an external terminal in current directory
   (global-set-key (kbd "C-<f5>") #'terminal-here-launch)
   (global-set-key (kbd "C-<f6>") #'terminal-here-project-launch)
+  ;; open pdfs in external viewer
+  (require 'openwith)
+  (openwith-mode t)
+  (setq openwith-associations '(("\\.pdf\\'" "zathura" (file))))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
