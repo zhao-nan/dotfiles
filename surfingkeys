@@ -1,9 +1,9 @@
 // an example to replace `T` with `gt`, click `Default mappings` to see how `T` works.
 map('gt', 'T');
-map('J', 'E');
-map('K', 'R');
-map('h', 'd');
-map('l', 'u');
+map('J', 'd');
+map('K', 'u');
+map('h', 'E');
+map('l', 'R');
 map('<', '[[');
 map('>', ']]');
 map('<Ctrl-o>', ';m');
