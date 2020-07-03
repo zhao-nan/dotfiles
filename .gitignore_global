@@ -204,3 +204,7 @@ TAGS
 # emacs auto folder
 /auto/
 **/auto/
+
+# weird KeY/Intellij crap
+key.core/src/main/resources/de/uka/ilkd/key/util/branch
+key.core/src/main/resources/de/uka/ilkd/key/util/sha1
