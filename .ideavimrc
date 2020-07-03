@@ -1,0 +1,5 @@
+inoremap fd <esc>
+inoremap jml /*@<CR>@<CR>@*/<Up><Left><Left><Left><Del><Down><Del><Up><Right><Right><Right><Right>
+
+nnoremap <space> :action mweActions<CR>
+vnoremap <space> :action mweActions<CR>
