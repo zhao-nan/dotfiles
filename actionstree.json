@@ -1,0 +1,855 @@
+{
+  "items": [
+    {
+      "id": "mweActions",
+      "name": "my actions",
+      "keys": ["ctrl alt Q"],
+      "items": [
+        {
+          "keys": [
+            "SPACE"
+          ],
+          "id": "GotoAction"
+        },
+        {
+          "keys": [
+            "typed a"
+          ],
+          "name": "Quick Actions",
+          "items": [
+            {
+              "keys": [
+                "typed c",
+                "typed a"
+              ],
+              "id": "ShowIntentionActions"
+            }
+          ]
+        },
+        {
+          "separator-above": "",
+          "keys": [
+            "typed j"
+          ],
+          "name": "Jump to",
+          "items": [
+            {
+              "keys": [
+                "typed g",
+                "typed d"
+              ],
+              "id": "GotoDeclaration"
+            },
+            {
+              "keys": [
+                "typed i"
+              ],
+              "id": "GotoImplementation"
+            },
+            {
+              "keys": [
+                "typed T"
+              ],
+              "id": "GotoTypeDeclaration"
+            },
+            {
+              "keys": [
+                "typed s"
+              ],
+              "id": "GotoSuperMethod"
+            },
+            {
+              "separator-above": "",
+              "keys": [
+                "typed j"
+              ],
+              "id": "AceAction"
+            },
+            {
+              "keys": [
+                "typed t"
+              ],
+              "id": "org.moreunit.actions.jump"
+            },
+            {
+              "keys": [
+                "typed u"
+              ],
+              "id": "FindUsages",
+              "separator-above": ""
+            },
+            {
+              "keys": [
+                "typed h"
+              ],
+              "name": "Hierarchy",
+              "items": [
+                {
+                  "keys": [
+                    "typed c"
+                  ],
+                  "id": "CallHierarchy"
+                },
+                {
+                  "separator-above": "",
+                  "keys": [
+                    "typed t"
+                  ],
+                  "id": "TypeHierarchy"
+                },
+                {
+                  "keys": [
+                    "typed m"
+                  ],
+                  "id": "MethodHierarchy"
+                }
+              ]
+            },
+            {
+              "keys": [
+                "typed ["
+              ],
+              "id": "EditorCodeBlockStart",
+              "separator-above": ""
+            },
+            {
+              "keys": [
+                "typed ]"
+              ],
+              "id": "EditorCodeBlockEnd"
+            }
+          ]
+        },
+        {
+          "keys": [
+            "typed f"
+          ],
+          "name": "Find",
+          "items": [
+            {
+              "keys": [
+                "typed p"
+              ],
+              "id": "FindInPath"
+            },
+            {
+              "keys": [
+                "typed e"
+              ],
+              "id": "SearchEverywhere",
+              "separator-above": ""
+            },
+            {
+              "keys": [
+                "typed c"
+              ],
+              "id": "GotoClass"
+            },
+            {
+              "keys": [
+                "typed f"
+              ],
+              "id": "GotoFile"
+            },
+            {
+              "keys": [
+                "typed s"
+              ],
+              "id": "GotoSymbol"
+            },
+            {
+              "keys": [
+                "typed a"
+              ],
+              "id": "GotoAction"
+            },
+            {
+              "keys": [
+                "typed r"
+              ],
+              "id": "RecentFiles",
+              "separator-above": ""
+            },
+            {
+              "keys": [
+                "typed l"
+              ],
+              "id": "Find",
+              "separator-above": ""
+            },
+            {
+              "keys": [
+                "typed R"
+              ],
+              "id": "Replace"
+            }
+          ]
+        },
+        {
+          "keys": [
+            "typed r"
+          ],
+          "name": "Refactoring",
+          "separator-above": "",
+          "items": [
+            {
+              "keys": [
+                "typed r"
+              ],
+              "id": "RenameElement"
+            },
+            {
+              "keys": [
+                "typed R"
+              ],
+              "id": "Refactorings.QuickListPopupAction"
+            },
+            {
+              "separator-above": "",
+              "keys": [
+                "typed i"
+              ],
+              "id": "Inline"
+            },
+            {
+              "keys": [
+                "typed e"
+              ],
+              "name": "Extract",
+              "items": [
+                {
+                  "keys": [
+                    "typed m"
+                  ],
+                  "id": "ExtractMethod"
+                },
+                {
+                  "keys": [
+                    "typed s"
+                  ],
+                  "id": "ExtractSuperclass"
+                },
+                {
+                  "separator-above": "",
+                  "keys": [
+                    "typed c"
+                  ],
+                  "id": "IntroduceConstant"
+                },
+                {
+                  "keys": [
+                    "typed f"
+                  ],
+                  "id": "IntroduceField"
+                },
+                {
+                  "keys": [
+                    "typed v"
+                  ],
+                  "id": "IntroduceVariable"
+                },
+                {
+                  "keys": [
+                    "typed p"
+                  ],
+                  "name": "Parameters",
+                  "items": [
+                    {
+                      "keys": [
+                        "typed p"
+                      ],
+                      "id": "IntroduceParameter"
+                    },
+                    {
+                      "keys": [
+                        "typed o"
+                      ],
+                      "id": "IntroduceParameterObject"
+                    },
+                    {
+                      "keys": [
+                        "typed f"
+                      ],
+                      "id": "IntroduceFunctionalParameter"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "keys": [
+                "typed p"
+              ],
+              "name": "Push/Pull",
+              "items": [
+                {
+                  "keys": [
+                    "typed u"
+                  ],
+                  "id": "MembersPullUp"
+                },
+                {
+                  "keys": [
+                    "typed d"
+                  ],
+                  "id": "MemberPushDown"
+                }
+              ]
+            },
+            {
+              "separator-above": "",
+              "keys": [
+                "typed f"
+              ],
+              "id": "ReformatCode"
+            },
+            {
+              "keys": [
+                "typed o"
+              ],
+              "id": "OptimizeImports"
+            },
+            {
+              "keys": [
+                "typed c"
+              ],
+              "id": "CodeCleanup"
+            }
+          ]
+        },
+        {
+          "keys": [
+            "typed g"
+          ],
+          "name": "Generate",
+          "items": [
+            {
+              "keys": [
+                "typed G"
+              ],
+              "id": "Generate"
+            },
+            {
+              "keys": [
+                "typed g"
+              ],
+              "id": "GenerateGetterAndSetter"
+            },
+            {
+              "keys": [
+                "typed c"
+              ],
+              "id": "GenerateConstructor"
+            },
+            {
+              "separator-above": "",
+              "keys": [
+                "typed i"
+              ],
+              "id": "ImplementMethods"
+            },
+            {
+              "keys": [
+                "typed o"
+              ],
+              "id": "OverrideMethods"
+            },
+            {
+              "keys": [
+                "typed d"
+              ],
+              "id": "DelegateMethods"
+            },
+            {
+              "separator-above": "",
+              "keys": [
+                "typed n"
+              ],
+              "name": "New",
+              "items": [
+                {
+                  "keys": [
+                    "typed c"
+                  ],
+                  "id": "NewClass"
+                },
+                {
+                  "keys": [
+                    "typed t"
+                  ],
+                  "id": "NewTypeScriptFile"
+                },
+                {
+                  "separator-above": "",
+                  "keys": [
+                    "typed e"
+                  ],
+                  "id": "NewElement"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "keys": [
+            "typed d"
+          ],
+          "name": "Debug",
+          "items": [
+            {
+              "keys": [
+                "typed c"
+              ],
+              "id": "RunToCursor"
+            },
+            {
+              "keys": [
+                "typed p"
+              ],
+              "id": "ShowExecutionPoint"
+            },
+            {
+              "separator-above": "",
+              "keys": [
+                "typed b"
+              ],
+              "id": "ToggleLineBreakpoint"
+            },
+            {
+              "keys": [
+                "typed B"
+              ],
+              "id": "ViewBreakpoints"
+            },
+            {
+              "keys": [
+                "typed m"
+              ],
+              "id": "XDebugger.MuteBreakpoints"
+            },
+            {
+              "separator-above": "",
+              "keys": [
+                "typed r"
+              ],
+              "id": "Resume"
+            },
+            {
+              "keys": [
+                "typed o"
+              ],
+              "id": "StepOver"
+            },
+            {
+              "keys": [
+                "typed i"
+              ],
+              "id": "StepInto"
+            },
+            {
+              "keys": [
+                "typed O"
+              ],
+              "id": "StepOut"
+            },
+            {
+              "keys": [
+                "typed s"
+              ],
+              "name": "Sticky Step",
+              "items": [
+                {
+                  "keys": [
+                    "typed o"
+                  ],
+                  "id": "StepOver",
+                  "sticky": true
+                },
+                {
+                  "keys": [
+                    "typed i"
+                  ],
+                  "id": "StepInto",
+                  "sticky": true
+                },
+                {
+                  "keys": [
+                    "typed O"
+                  ],
+                  "id": "StepOut",
+                  "sticky": true
+                }
+              ]
+            },
+            {
+              "separator-above": "",
+              "keys": [
+                "typed e"
+              ],
+              "id": "EvaluateExpression"
+            },
+            {
+              "keys": [
+                "typed t"
+              ],
+              "id": "StreamTracerAction"
+            },
+            {
+              "separator-above": "",
+              "keys": [
+                "typed w"
+              ],
+              "id": "Debugger.AddToWatch"
+            }
+          ]
+        },
+        {
+          "keys": [
+            "typed e"
+          ],
+          "name": "Error",
+          "items": [
+            {
+              "keys": [
+                "typed l"
+              ],
+              "id": "CodeInspection.OnEditor"
+            },
+            {
+              "keys": [
+                "typed s"
+              ],
+              "id": "RunInspection"
+            },
+            {
+              "keys": [
+                "typed x"
+              ],
+              "id": "ShowErrorDescription"
+            },
+            {
+              "keys": [
+                "typed n"
+              ],
+              "id": "GotoNextError",
+              "separator-above": ""
+            },
+            {
+              "keys": [
+                "typed N",
+                "typed p"
+              ],
+              "id": "GotoPreviousError"
+            }
+          ]
+        },
+        {
+          "separator-above": "",
+          "keys": [
+            "typed v"
+          ],
+          "name": "View",
+          "items": [
+            {
+              "keys": [
+                "typed p"
+              ],
+              "id": "ActivateProjectToolWindow"
+            },
+            {
+              "separator-above": "",
+              "keys": [
+                "typed s"
+              ],
+              "id": "ActivateStructureToolWindow"
+            },
+            {
+              "keys": [
+                "typed r"
+              ],
+              "id": "ActivateRunToolWindow"
+            },
+            {
+              "keys": [
+                "typed d"
+              ],
+              "id": "ActivateDebugToolWindow"
+            },
+            {
+              "keys": [
+                "typed g"
+              ],
+              "id": "ActivateGradleToolWindow"
+            },
+            {
+              "keys": [
+                "typed t"
+              ],
+              "id": "ActivateTerminalToolWindow"
+            },
+            {
+              "separator-above": "",
+              "keys": [
+                "typed e"
+              ],
+              "id": "ActivateEventLogToolWindow"
+            }
+          ]
+        },
+        {
+          "keys": [
+            "typed t"
+          ],
+          "name": "Toggle",
+          "items": [
+            {
+              "keys": [
+                "typed f"
+              ],
+              "id": "ToggleFullScreen"
+            },
+            {
+              "keys": [
+                "typed z"
+              ],
+              "id": "ToggleZenMode"
+            },
+            {
+              "keys": [
+                "typed p"
+              ],
+              "id": "TogglePresentationMode"
+            }
+          ]
+        },
+        {
+          "keys": [
+            "typed s"
+          ],
+          "name": "Settings",
+          "items": [
+            {
+              "keys": [
+                "typed s"
+              ],
+              "id": "ShowSettings"
+            },
+            {
+              "keys": [
+                "typed p"
+              ],
+              "id": "ShowProjectStructureSettings"
+            }
+          ]
+        },
+        {
+          "separator-above": "",
+          "keys": [
+            "typed c"
+          ],
+          "name": "Copy / Paste",
+          "items": [
+            {
+              "keys": [
+                "typed c"
+              ],
+              "id": "$Copy"
+            },
+            {
+              "keys": [
+                "typed p"
+              ],
+              "id": "$Paste"
+            }
+          ]
+        },
+        {
+          "keys": [
+            "typed m"
+          ],
+          "name": "Major",
+          "items": [
+            {
+              "keys": [
+                "typed r"
+              ],
+              "name": "Run",
+              "items": [
+                {
+                  "keys": [
+                    "typed r"
+                  ],
+                  "id": "Run"
+                },
+                {
+                  "keys": [
+                    "typed d"
+                  ],
+                  "id": "Debug"
+                },
+                {
+                  "keys": [
+                    "typed s"
+                  ],
+                  "id": "Stop"
+                },
+                {
+                  "separator-above": "",
+                  "keys": [
+                    "typed c"
+                  ],
+                  "id": "RunClass"
+                },
+                {
+                  "keys": [
+                    "typed C"
+                  ],
+                  "id": "DebugClass"
+                },
+                {
+                  "separator-above": "",
+                  "keys": [
+                    "typed R"
+                  ],
+                  "id": "ChooseRunConfiguration"
+                },
+                {
+                  "keys": [
+                    "typed D"
+                  ],
+                  "id": "ChooseDebugConfiguration"
+                },
+                {
+                  "keys": [
+                    "typed m"
+                  ],
+                  "id": "RunMenu"
+                },
+                {
+                  "separator-above": "",
+                  "keys": [
+                    "typed a"
+                  ],
+                  "id": "RunAnything"
+                },
+                {
+                  "keys": [
+                    "typed o"
+                  ],
+                  "id": "Coverage"
+                },
+                {
+                  "separator-above": "",
+                  "keys": [
+                    "typed t"
+                  ],
+                  "id": "RunConfigurationAsAction_Run_alltests_default_target"
+                },
+                {
+                  "keys": [
+                    "typed u"
+                  ],
+                  "id": "RunConfigurationAsAction_Run_undertest_default_target"
+                }
+              ]
+            },
+            {
+              "keys": [
+                "typed p"
+              ],
+              "id": "ManageRecentProjects"
+            },
+            {
+              "keys": [
+                "typed m"
+              ],
+              "name": "Menu",
+              "items": [
+                {
+                  "keys": [
+                    "typed f"
+                  ],
+                  "id": "FileMenu"
+                },
+                {
+                  "keys": [
+                    "typed e"
+                  ],
+                  "id": "EditMenu"
+                },
+                {
+                  "keys": [
+                    "typed v"
+                  ],
+                  "id": "ViewMenu"
+                },
+                {
+                  "keys": [
+                    "typed c"
+                  ],
+                  "id": "CodeMenu"
+                },
+                {
+                  "keys": [
+                    "typed a"
+                  ],
+                  "id": "AnalyzeMenu"
+                },
+                {
+                  "keys": [
+                    "typed r"
+                  ],
+                  "id": "RefactoringMenu"
+                },
+                {
+                  "keys": [
+                    "typed b"
+                  ],
+                  "id": "BuildMenu"
+                },
+                {
+                  "keys": [
+                    "typed u"
+                  ],
+                  "id": "RunMenu"
+                },
+                {
+                  "keys": [
+                    "typed t"
+                  ],
+                  "id": "ToolsMenu"
+                },
+                {
+                  "keys": [
+                    "typed g"
+                  ],
+                  "id": "VCS"
+                },
+                {
+                  "keys": [
+                    "typed h"
+                  ],
+                  "id": "HelpMenu"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "keys": [
+            "typed q"
+          ],
+          "name": "Miscellaneous",
+          "items": [
+            {
+              "keys": [
+                "typed r"
+              ],
+              "id": "com.gitlab.lae.intellij.actions.tree.reload"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
