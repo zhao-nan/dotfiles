@@ -2,4 +2,4 @@
 
 # start emacs server with org agenda opnened
 
-emacsclient -n -c -a \"\" -e \"(org-agenda-list)\"
+emacsclient -n -c -a "" -e "(org-agenda-list)"
