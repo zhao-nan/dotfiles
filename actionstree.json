@@ -837,6 +837,12 @@
         },
         {
           "keys": [
+            "typed i"
+          ],
+          "id": "QuickJavaDoc"
+        },
+        {
+          "keys": [
             "typed q"
           ],
           "name": "Miscellaneous",
