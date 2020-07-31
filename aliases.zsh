@@ -38,6 +38,12 @@ texwiz-lncs() {
     ec main.tex
 }
 
+texwiz-presentation-kit() {
+    cp ~/Templates/latex/pres.tex .
+    pdflatex pres.tex
+    ec pres.tex
+}
+
 # Archives
 function extract {
   if [ -z "$1" ]; then
