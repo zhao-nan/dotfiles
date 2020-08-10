@@ -17,6 +17,8 @@ unmap('<Ctrl-i>');
 Hints.characters = 'asdfghjklwe';
 settings.hintAlign = "left";
 
+addSearchAliasX('s', 'leo eng', 'https://dict.leo.org/englisch-deutsch/', 'le');
+
 // set theme
 settings.theme = `
 .sk_theme {
