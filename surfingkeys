@@ -30,6 +30,8 @@ addSearchAliasX('ge', 'genius', 'http://genius.com/search?q=');
 
 addSearchAliasX('sc', 'scholar', 'https://scholar.google.de/scholar?hl=en&as_sdt=0%2C5&q=');
 
+addSearchAliasX('y', 'youtube', 'https://www.youtube.com/results?search_query=');
+
 // set theme
 settings.theme = `
 .sk_theme {
