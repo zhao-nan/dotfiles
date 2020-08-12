@@ -32,6 +32,8 @@ addSearchAliasX('sc', 'scholar', 'https://scholar.google.de/scholar?hl=en&as_sdt
 
 addSearchAliasX('y', 'youtube', 'https://www.youtube.com/results?search_query=');
 
+removeSearchAliasX('bing', 'w', '');
+
 // set theme
 settings.theme = `
 .sk_theme {
