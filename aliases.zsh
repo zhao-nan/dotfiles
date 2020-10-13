@@ -32,15 +32,14 @@ alias psa='ps -A'
 alias verx='python3 ~/projects/svi-kastel/bim/verx/VerX/client.py'
 
 texwiz-lncs() {
+    touch bib.bib
     cp ~/Templates/latex/lncs-js.tex .
     mv lncs-js.tex main.tex
-    pdflatex main.tex
     ec main.tex
 }
 
 texwiz-presentation-kit() {
     cp ~/Templates/latex/pres.tex .
-    pdflatex pres.tex
     ec pres.tex
 }
 
