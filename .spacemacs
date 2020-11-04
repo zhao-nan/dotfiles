@@ -417,12 +417,11 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  ;; Activate column indicator and text-mode
-  ;; (add-hook 'prog-mode-hook 'turn-on-fci-mode)
-  (with-eval-after-load 'org (setq org-agenda-files '("~/projects/orga/orgSync")))
-  ;; (add-hook 'text-mode-hook 'turn-on-fci-mode)
   ;; 100 characters should be enough for everybody
   (setq-default fill-column 100)
+  (with-eval-after-load 'org (setq org-agenda-files '("~/projects/orga/orgSync")))
+  (setq org-todo-keywords '((sequence "TODO" "IDEA" "|" "DONE")))
+  (setq org-todo-keyword-faces '(("IDEA" . "blue")))
   ;; no default tex master file
   (setq-default TeX-master nil)
   ;; set default pdf viewer to system default
