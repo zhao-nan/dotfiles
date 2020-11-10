@@ -420,8 +420,8 @@ you should place your code here."
   ;; 100 characters should be enough for everybody
   (setq-default fill-column 100)
   (with-eval-after-load 'org (setq org-agenda-files '("~/projects/orga/orgSync")))
-  (setq org-todo-keywords '((sequence "TODO" "IDEA" "|" "DONE")))
-  (setq org-todo-keyword-faces '(("IDEA" . "blue")))
+  (setq org-todo-keywords '((sequence "TODO" "WAITING" "|" "DONE")))
+  (setq org-todo-keyword-faces '(("WAITING" . "blue")))
   ;; no default tex master file
   (setq-default TeX-master nil)
   ;; set default pdf viewer to system default
