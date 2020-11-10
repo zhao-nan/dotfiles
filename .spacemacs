@@ -419,7 +419,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   ;; 100 characters should be enough for everybody
   (setq-default fill-column 100)
-  (with-eval-after-load 'org (setq org-agenda-files '("~/projects/orga/orgSync")))
+  (with-eval-after-load 'org (setq org-agenda-files '("~/org")))
   (setq org-todo-keywords '((sequence "TODO" "WAITING" "|" "DONE")))
   (setq org-todo-keyword-faces '(("WAITING" . "blue")))
   ;; no default tex master file
