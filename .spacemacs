@@ -33,12 +33,9 @@ values."
    '(javascript
      vimscript
      ;; languages
-     boogie-friends
      html
      (java :variables java-backend 'lsp)
-     (latex :variables
-            latex-enable-auto-fill t
-            latex-enable-folding t)
+     (latex :variables latex-enable-auto-fill t)
      markdown
      python
      rust
@@ -49,7 +46,6 @@ values."
      evil-commentary
      git
      helm
-     pdf
      ranger
      syntax-checking
      version-control
@@ -165,7 +161,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 18
+                               :size 20
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
