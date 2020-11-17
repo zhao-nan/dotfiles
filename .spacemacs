@@ -415,26 +415,32 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   ;; 100 characters should be enough for everybody
   (setq-default fill-column 100)
+
+  ;; org
   (with-eval-after-load 'org (setq org-agenda-files '("~/org")))
   (setq org-todo-keywords '((sequence "TODO" "WAITING" "|" "DONE")))
   (setq org-todo-keyword-faces '(("WAITING" . "blue")))
   ;; no default tex master file
   (setq-default TeX-master nil)
+
   ;; set default pdf viewer to system default
   (with-eval-after-load 'tex
     (add-to-list 'TeX-view-program-selection
                  '(output-pdf "xdg-open")))
-  ;; follow symlinks in version-controlled folders
-  (setq vc-follow-symlinks t)
-  (setq TeX-save-query nil)
-  (setq vim-style-visual-line-move-text t)
-  ;; enable opening an external terminal in current directory
-  (global-set-key (kbd "C-<f5>") #'terminal-here-launch)
-  (global-set-key (kbd "C-<f6>") #'terminal-here-project-launch)
+
   ;; open pdfs in external viewer
   (require 'openwith)
   (openwith-mode t)
   (setq openwith-associations '(("\\.pdf\\'" "zathura" (file))))
+
+  ;; follow symlinks in version-controlled folders
+  (setq vc-follow-symlinks t)
+  (setq TeX-save-query nil)
+  (setq vim-style-visual-line-move-text t)
+
+  ;; enable opening an external terminal in current directory
+  (global-set-key (kbd "C-<f5>") #'terminal-here-launch)
+  (global-set-key (kbd "C-<f6>") #'terminal-here-project-launch)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
