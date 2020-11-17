@@ -40,6 +40,7 @@ values."
      python
      rust
      solidity
+     boogie-friends
      ;; utilities
      auto-completion
      emacs-lisp
@@ -428,10 +429,10 @@ you should place your code here."
     (add-to-list 'TeX-view-program-selection
                  '(output-pdf "xdg-open")))
 
-  ;; open pdfs in external viewer
-  (require 'openwith)
-  (openwith-mode t)
-  (setq openwith-associations '(("\\.pdf\\'" "zathura" (file))))
+  ;; ;; open pdfs in external viewer
+  ;; (require 'openwith)
+  ;; (openwith-mode t)
+  ;; (setq openwith-associations '(("\\.pdf\\'" "zathura" (file))))
 
   ;; follow symlinks in version-controlled folders
   (setq vc-follow-symlinks t)
