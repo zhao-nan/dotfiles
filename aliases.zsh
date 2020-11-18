@@ -29,7 +29,7 @@ alias tour='nohup ~/programs/Tourenplaner/Tourenplaner > /dev/null 2>&1 &'
 alias extr='extract '
 alias extrem='extract_and_remove '
 alias psa='ps -A'
-alias verx='python3 ~/projects/svi-kastel/bim/verx/VerX/client.py'
+alias verx='python3 ~/projects/svi-kastel/bim/verification/verx/VerX/client.py'
 
 texwiz-lncs() {
     touch bib.bib
