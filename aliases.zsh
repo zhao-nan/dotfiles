@@ -1,11 +1,15 @@
 source $HOME/.private_names.sh
 
 alias o="xdg-open"
+
 alias l.="ls -d .?*"
 alias la="ls -A"
 alias lla="ls -lAh"
+alias psa='ps -A'
+alias extr='extract '
+alias extrem='extract_and_remove '
+
 alias magit='ec -e "(magit-status \"$(pwd)\")"'
-alias gita="git add ."
 alias git---="git checkout --"
 alias svnm="svn commit -m"
 alias svnc="svnm"
@@ -14,22 +18,21 @@ alias zalias="ec ~/.oh-my-zsh/custom/aliases.zsh"
 alias brc="ec ~/.bashrc"
 alias zrc="ec ~/.zshrc"
 alias zshenv="ec ~/.zshenv"
-alias zot="nohup $HOME/programs/zotero/zotero > /dev/null 2>&1 &"
-alias rules="cd ~/programs/key/key/key.core/src/main/resources/de/uka/ilkd/key/proof/rules/"
+
 alias cdk="cd ~/programs/key/"
 alias ksc="cd ~/programs/key/key/scripts"
 alias ukey="cd $HOME/programs/key-use/key/key/ && ./gradlew run"
 alias lkey="$HOME/programs/key-use/key/key/scripts/key"
-alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
+alias rules="cd ~/programs/key/key/key.core/src/main/resources/de/uka/ilkd/key/proof/rules/"
+
 alias inst="sudo apt-get install"
 alias i57adm="ssh $ssh_workgroup_login"
-alias carun="cargo run"
-alias carrel="time cargo run --release"
-alias tour='nohup ~/programs/Tourenplaner/Tourenplaner > /dev/null 2>&1 &'
-alias extr='extract '
-alias extrem='extract_and_remove '
-alias psa='ps -A'
+
+alias tour='brun $HOME/programs/Tourenplaner/Tourenplaner'
+alias zot="brun $HOME/programs/zotero/zotero"
 alias verx='python3 ~/projects/svi-kastel/bim/verification/verx/VerX/client.py'
+alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
+alias tla-toolbox="brun $HOME/programs/TLA-toolbox/toolbox"
 
 texwiz-lncs() {
     touch bib.bib
@@ -92,4 +95,9 @@ fd() {
 cf() {
     cd
     fd
+}
+
+# "background run"
+function brun {
+    nohup $1 > /dev/null 2>&1 &
 }
