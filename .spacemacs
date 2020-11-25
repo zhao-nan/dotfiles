@@ -57,7 +57,10 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(terminal-here openwith)
+   dotspacemacs-additional-packages
+   '(terminal-here
+     openwith
+     )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -429,10 +432,10 @@ you should place your code here."
     (add-to-list 'TeX-view-program-selection
                  '(output-pdf "xdg-open")))
 
-  ;; ;; open pdfs in external viewer
-  ;; (require 'openwith)
-  ;; (openwith-mode t)
-  ;; (setq openwith-associations '(("\\.pdf\\'" "zathura" (file))))
+  ;; open pdfs in external viewer
+  (require 'openwith)
+  (openwith-mode t)
+  (setq openwith-associations '(("\\.pdf\\'" "zathura" (file))))
 
   ;; follow symlinks in version-controlled folders
   (setq vc-follow-symlinks t)
@@ -442,6 +445,9 @@ you should place your code here."
   ;; enable opening an external terminal in current directory
   (global-set-key (kbd "C-<f5>") #'terminal-here-launch)
   (global-set-key (kbd "C-<f6>") #'terminal-here-project-launch)
+
+  ;; tla-mode
+  (load "~/.emacs.d/private/local/tla-mode/tla-mode.el")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
