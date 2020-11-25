@@ -101,3 +101,13 @@ cf() {
 function brun {
     nohup $1 > /dev/null 2>&1 &
 }
+
+# move, and create dir if it does not already exist
+function mvp () {
+    dir="$2"
+    tmp="$2"; tmp="${tmp: -1}"
+    [ "$tmp" != "/" ] && dir="$(dirname "$2")"
+    [ -a "$dir" ] ||
+        mkdir -p "$dir" &&
+            mv "$@"
+}
