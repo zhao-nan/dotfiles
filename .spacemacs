@@ -424,6 +424,8 @@ you should place your code here."
   (with-eval-after-load 'org (setq org-agenda-files '("~/org")))
   (setq org-todo-keywords '((sequence "TODO" "WAITING" "|" "DONE")))
   (setq org-todo-keyword-faces '(("WAITING" . "blue")))
+  (add-hook 'org-mode-hook 'turn-on-auto-fill)
+
   ;; no default tex master file
   (setq-default TeX-master nil)
 
