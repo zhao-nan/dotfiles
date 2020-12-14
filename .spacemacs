@@ -419,13 +419,49 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  ;; load private variables
+  (when (file-exists-p "~/.private_emacs")
+    (load "~/.private_emacs"))
+
+  ;; set location of diary file
+  (setq diary-file "~/org/cal/diary")
+
+  ;; import calendars
+  (setq diary-location "~/org/cal/")
+  (defun getcal (url file)
+    "Download ics file and add it to file"
+    (let ((tmpfile (url-file-local-copy url)))
+      (icalendar-import-file tmpfile file)
+      (kill-buffer (car (last (split-string tmpfile "/"))))))
+
+  (defun getcals ()
+  "Load a set of ICS calendars into Emacs diary files"
+  (interactive)
+  (mapcar #'(lambda (x)
+              (let ((file (concat diary-location (car x)))
+                    (url (cdr x)))
+                (message (concat "Loading " url " into " file))
+                (find-file file)
+                ;; (flush-lines "^[& ]") ;; if you import ical as non marking
+                (erase-buffer) ;; to avoid duplicating events
+                (getcal url file)
+                ))
+          calendars))
+
   ;; 100 characters should be enough for everybody
   (setq-default fill-column 100)
 
   ;; org
   (with-eval-after-load 'org (setq org-agenda-files '("~/org")))
-  (setq org-todo-keywords '((sequence "TODO" "WAITING" "|" "DONE")))
-  (setq org-todo-keyword-faces '(("WAITING" . "blue")))
+  (setq org-todo-keywords
+        '((sequence "TODO" "|" "DONE")
+          (sequence "IDEA" "|" "DONE")
+          (sequence  "QUESTION" "|" "ANSWERED")
+          (sequence "|" "CANCELLED")))
+  (setq org-todo-keyword-faces '(("IDEA" . "blue")
+                                 ("QUESTION" . "gold")
+                                 ("ANSWERED" . "chartreuse")
+                                 ("CANCELLED" . "dark gray")))
   (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
   ;; no default tex master file
