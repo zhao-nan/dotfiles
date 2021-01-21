@@ -37,6 +37,12 @@ then
     sudo dpkg -i bat_0.12.1_amd64.deb
     rm bat_0.12.1_amd64.deb
 
+    # nemo instead of nautilus
+    sudo apt install nemo
+    xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
+    gsettings set org.gnome.desktop.background show-desktop-icons false
+    gsettings set org.nemo.desktop show-desktop-icons true
+
     # set up symlinks to dotfiles
     cd $HOME/dotfiles/scripts/
     ./setup
