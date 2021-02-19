@@ -19,6 +19,7 @@ settings.hintAlign = "left";
 
 removeSearchAliasX('b');
 removeSearchAliasX('w');
+removeSearchAliasX('e');
 
 addSearchAliasX('le', 'leo-eng', 'https://dict.leo.org/englisch-deutsch/');
 addSearchAliasX('lf', 'leo-fra', 'https://dict.leo.org/französisch-deutsch/');
