@@ -8,6 +8,7 @@ alias lla="ls -lAh"
 alias psa='ps -A'
 alias extr='extract '
 alias extrem='extract_and_remove '
+alias rg="rg --smart-case"
 
 alias magit='ec -e "(magit-status \"$(pwd)\")"'
 alias git---="git checkout --"
@@ -18,6 +19,7 @@ alias zalias="ec ~/.oh-my-zsh/custom/aliases.zsh"
 alias brc="ec ~/.bashrc"
 alias zrc="ec ~/.zshrc"
 alias zshenv="ec ~/.zshenv"
+alias srcall="source ~/.oh-my-zsh/custom/aliases.zsh ~/.bashrc ~/.zshrc ~/.zshenv"
 
 alias cdk="cd ~/programs/key/"
 alias ksc="cd ~/programs/key/key/scripts"
@@ -28,7 +30,7 @@ alias rules="cd ~/programs/key/key/key.core/src/main/resources/de/uka/ilkd/key/p
 alias inst="sudo apt-get install"
 alias i57adm="ssh $ssh_workgroup_login"
 
-alias tour='brun $HOME/programs/Tourenplaner/Tourenplaner'
+alias tour='cd $HOME/programs/Tourenplaner && brun ./Tourenplaner'
 alias zot="brun $HOME/programs/zotero/zotero"
 alias verx='python3 ~/projects/svi-kastel/bim/verification/verx/VerX/client.py'
 alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
@@ -112,4 +114,8 @@ function mvp () {
     [ -a "$dir" ] ||
         mkdir -p "$dir" &&
             mv "$@"
+}
+
+function c3 {
+    cat $1 && z3 $1
 }
