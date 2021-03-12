@@ -17,14 +17,18 @@ map('<Ctrl-o>', ';m');
 Hints.characters = 'asdfghjklwe';
 settings.hintAlign = "left";
 
+removeSearchAliasX('b');
+removeSearchAliasX('w');
+removeSearchAliasX('e');
+
 addSearchAliasX('le', 'leo-eng', 'https://dict.leo.org/englisch-deutsch/');
 addSearchAliasX('lf', 'leo-fra', 'https://dict.leo.org/französisch-deutsch/');
 addSearchAliasX('li', 'leo-ita', 'https://dict.leo.org/italienisch-deutsch/');
 addSearchAliasX('ls', 'leo-esp', 'https://dict.leo.org/spanisch-deutsch/');
 addSearchAliasX('lc', 'leo-chn', 'https://dict.leo.org/chinesisch-deutsch/');
 
-addSearchAliasX('dd', 'wiki-de', 'http://de.wikipedia.org/w/index.php?search=');
-addSearchAliasX('ee', 'wiki-en', 'http://en.wikipedia.org/w/index.php?search=');
+addSearchAliasX('wd', 'wiki-de', 'http://de.wikipedia.org/w/index.php?search=');
+addSearchAliasX('we', 'wiki-en', 'http://en.wikipedia.org/w/index.php?search=');
 
 addSearchAliasX('ong', 'genius', 'http://genius.com/search?q=');
 
