@@ -33,6 +33,7 @@ alias zot="brun $HOME/programs/zotero/zotero"
 alias verx='python3 ~/projects/svi-kastel/bim/verification/verx/VerX/client.py'
 alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
 alias tla-toolbox="brun $HOME/programs/TLA-toolbox/toolbox"
+alias grd="./gradlew"
 
 texwiz-lncs() {
     touch bib.bib
