@@ -423,30 +423,12 @@ you should place your code here."
   (when (file-exists-p "~/.private_emacs")
     (load "~/.private_emacs"))
 
-  ;; set location of diary file
-  (setq diary-file "~/org/cal/diary")
-
-  ;; import calendars
-  (setq diary-location "~/org/cal/")
-  (defun getcal (url file)
-    "Download ics file and add it to file"
-    (let ((tmpfile (url-file-local-copy url)))
-      (icalendar-import-file tmpfile file)
-      (kill-buffer (car (last (split-string tmpfile "/"))))))
-
-  (defun getcals ()
-  "Load a set of ICS calendars into Emacs diary files"
-  (interactive)
-  (mapcar #'(lambda (x)
-              (let ((file (concat diary-location (car x)))
-                    (url (cdr x)))
-                (message (concat "Loading " url " into " file))
-                (find-file file)
-                ;; (flush-lines "^[& ]") ;; if you import ical as non marking
-                (erase-buffer) ;; to avoid duplicating events
-                (getcal url file)
-                ))
-          calendars))
+  ;; save and close buffer in one command
+  (defun save-and-close-buffer ()
+    (interactive)
+    (save-buffer)
+    (spacemacs/kill-this-buffer))
+  (spacemacs/set-leader-keys "bc" 'save-and-close-buffer)
 
   ;; 100 characters should be enough for everybody
   (setq-default fill-column 100)

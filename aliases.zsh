@@ -1,5 +1,7 @@
 source $HOME/.private_names.sh
 
+alias sudo='sudo '
+
 alias o="xdg-open"
 
 alias l.="ls -d .?*"
@@ -23,7 +25,7 @@ alias srcall="source ~/.oh-my-zsh/custom/aliases.zsh ~/.bashrc ~/.zshrc ~/.zshen
 
 alias cdk="cd ~/programs/key/"
 alias ksc="cd ~/programs/key/key/scripts"
-alias ukey="cd $HOME/programs/key-use/key/key/ && ./gradlew run"
+alias ukey="cd $HOME/programs/key-use/key/ && ./gradlew run"
 alias lkey="$HOME/programs/key-use/key/key/scripts/key"
 alias rules="cd ~/programs/key/key/key.core/src/main/resources/de/uka/ilkd/key/proof/rules/"
 
@@ -37,6 +39,10 @@ alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSP
 alias tla-toolbox="brun $HOME/programs/TLA-toolbox/toolbox"
 alias slcverify="solc-verify.py --show-warnings"
 alias grd="./gradlew"
+
+suedit() {
+    sudo vi $1
+}
 
 texwiz-lncs() {
     touch bib.bib
