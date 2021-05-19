@@ -26,7 +26,7 @@ alias srcall="source ~/.oh-my-zsh/custom/aliases.zsh ~/.bashrc ~/.zshrc ~/.zshen
 alias cdk="cd ~/programs/key/"
 alias ksc="cd ~/programs/key/key/scripts"
 alias ukey="cd $HOME/programs/key-use/key/ && ./gradlew run"
-alias lkey="$HOME/programs/key-use/key/key/scripts/key"
+alias lkey="$HOME/programs/key-use/key/scripts/key"
 alias rules="cd ~/programs/key/key/key.core/src/main/resources/de/uka/ilkd/key/proof/rules/"
 
 alias inst="sudo apt-get install"
