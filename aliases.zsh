@@ -28,6 +28,8 @@ alias ksc="cd ~/programs/key/key/scripts"
 alias ukey="cd $HOME/programs/key-use/key/ && ./gradlew run"
 alias lkey="$HOME/programs/key-use/key/scripts/key"
 alias rules="cd ~/programs/key/key/key.core/src/main/resources/de/uka/ilkd/key/proof/rules/"
+alias strtwrk="startup-work &"
+alias feierabend="killall teams element-desktop mattermost-desktop slack zoom"
 
 alias inst="sudo apt-get install"
 alias i57adm="ssh $ssh_workgroup_login"

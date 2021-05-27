@@ -38,6 +38,7 @@ values."
      (latex :variables
             latex-enable-auto-fill t
             latex-enable-folding t)
+     bibtex
      markdown
      python
      rust
@@ -434,7 +435,7 @@ you should place your code here."
   (setq-default fill-column 100)
 
   ;; org
-  (with-eval-after-load 'org (setq org-agenda-files '("~/org")))
+  (with-eval-after-load 'org (setq org-agenda-files '("~/org" "~/org/lit/lit-notes.org")))
   (setq org-todo-keywords
         '((sequence "TODO" "|" "DONE")
           (sequence "IDEA" "|" "DONE")
@@ -458,6 +459,16 @@ you should place your code here."
   (require 'openwith)
   (openwith-mode t)
   (setq openwith-associations '(("\\.pdf\\'" "zathura" (file))))
+
+  ;; three times' the charm
+  (setq org-ref-open-pdf-function
+        (lambda (fpath)
+          (start-process "zathura" "*helm-bibtex-zathura*" "/usr/bin/zathura" fpath)))
+
+  ;; org-ref files
+  (setq org-ref-default-bibliography '("~/org/lit/references.bib")
+        org-ref-pdf-directory "~/Papers/"
+        org-ref-bibliography-notes "~/Papers/lit-notes.org")
 
   ;; follow symlinks in version-controlled folders
   (setq vc-follow-symlinks t)
