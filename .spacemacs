@@ -435,15 +435,17 @@ you should place your code here."
   (setq-default fill-column 100)
 
   ;; org
-  (with-eval-after-load 'org (setq org-agenda-files '("~/org" "~/org/lit/lit-notes.org")))
+  (with-eval-after-load 'org (setq org-agenda-files '("~/org" "~/org/lit/lit-notes.org" "~/org/cal/JS-Work.org")))
   (setq org-todo-keywords
         '((sequence "TODO" "|" "DONE")
           (sequence "IDEA" "|" "DONE")
           (sequence  "QUESTION" "|" "ANSWERED")
+          (sequence "|" "CALENDAR")
           (sequence "|" "CANCELLED")))
   (setq org-todo-keyword-faces '(("IDEA" . "blue")
                                  ("QUESTION" . "gold")
                                  ("ANSWERED" . "chartreuse")
+                                 ("CALENDAR" . "rosy brown")
                                  ("CANCELLED" . "dark gray")))
   (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
