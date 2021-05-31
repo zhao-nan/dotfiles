@@ -127,7 +127,7 @@ def txt_write(icsfile):
                     strtdate = event.start.strftime("%Y-%m-%d")
                     strttime = event.start.strftime("%H:%M")
                     endtime = event.end.strftime("%H:%M")
-                    myfile.write("CALENDAR " + event.summary.encode('utf-8').decode() + "\n")
+                    myfile.write("* CALENDAR " + event.summary.encode('utf-8').decode() + "\n")
                     myfile.write("SCHEDULED: <" + strtdate + " DD " + strttime + "-" + endtime + ">\n")
                     # TODO add day of week? is that necessary for org?
                     sys.stdout.write(".")
