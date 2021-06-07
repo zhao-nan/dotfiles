@@ -42,6 +42,12 @@ alias tla-toolbox="brun $HOME/programs/TLA-toolbox/toolbox"
 alias slcverify="solc-verify.py --show-warnings"
 alias grd="./gradlew"
 
+cc-convert-all-cals() {
+    ics2org.py $HOME/org/cal/$cal_pers &&
+    ics2org.py $HOME/org/cal/$cal_work &&
+    ics2org.py $HOME/org/cal/$cal_rs
+}
+
 suedit() {
     sudo vi $1
 }
