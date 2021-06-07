@@ -45,7 +45,6 @@ alias grd="./gradlew"
 cc-convert-all-cals() {
     oggi=$(date +%Y%m%d)
     next_month=$(date -d "$oggi+1 month" +%Y%m%d)
-    echo $next_month
     ics2org.py $HOME/org/cal/$cal_pers $oggi $next_month &&
     ics2org.py $HOME/org/cal/$cal_work $oggi $next_month &&
     ics2org.py $HOME/org/cal/$cal_rs $oggi $next_month
