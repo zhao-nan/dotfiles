@@ -100,36 +100,14 @@ def txt_write(icsfile):
     sys.stdout.write("Processing events : ")
     try:
         with open(txtfile, 'w') as myfile:
-            for event in sortedevents:
-
-                # if prevdate != event.start.strftime("%Y-%m-%d") and spent > 0: # Make a header for each day
-                #     if prevdate != '': # If you don't want a summary of the time spent added, comment this section. 
-                #         th=divmod(spent, 3600)[0]
-                #         tm=divmod(spent, 3600)[1]/60
-                #         myfile.write("\nTime Total: " + '{:02.0f}'.format(th) + ":" + '{:02.0f}'.format(tm) + "\n")
-                #         spent=0
-                if event.start.timestamp() > istart.timestamp() and event.start.timestamp() < istop.timestamp():
-                    # if prevdate != event.start.strftime("%Y-%m-%d"): # Make a header for each day
-                    #     prevdate = event.start.strftime("%Y-%m-%d")
-                    #     myfile.write("\nWorklog, " + prevdate + "\n===================\n")
-
-                    
-                    # duration = event.end - event.start
-                    # ds = duration.total_seconds()
-                    # spent += ds
-                    # hours = divmod(ds, 3600)[0]
-                    # minutes = divmod(ds,3600)[1]/60
-                    # values = event.start.strftime("%H:%M") + " - " + event.end.strftime("%H:%M") + " (" + '{:02.0f}'.format(hours) + ":" + '{:02.0f}'.format(minutes) + ") " + event.summary.encode('utf-8').decode()
-                    # if event.location != '': values = values + " [" + event.location + "]" # Only include location if there is one
-
-                    # Remove Google Meet and Skype Meeting part of description
-                    #print("DescLen: " + str(len(description)) + " TrimmedLen: " + str(len(trimmed)) + " : " + trimmed) # For debugging
+            for event in events:
+                # includes all-day events regardless of whether they're in range. imprecise, but don't care rn
+                if (not hasattr(event.start, 'timestamp')) or event.start.timestamp() > istart.timestamp() and event.start.timestamp() < istop.timestamp():
                     strtdate = event.start.strftime("%Y-%m-%d")
                     strttime = event.start.strftime("%H:%M")
                     endtime = event.end.strftime("%H:%M")
                     myfile.write("* CALENDAR " + event.summary.encode('utf-8').decode() + "\n")
                     myfile.write("SCHEDULED: <" + strtdate + " DD " + strttime + "-" + endtime + ">\n")
-                    # TODO add day of week? is that necessary for org?
                     sys.stdout.write(".")
                     sys.stdout.flush()
                     evcount+=1
@@ -137,10 +115,6 @@ def txt_write(icsfile):
                     sys.stdout.write("S")
                     sys.stdout.flush()
                     evskip+=1
-
-            # th=divmod(spent, 3600)[0]
-            # tm=divmod(spent, 3600)[1]/60
-            # myfile.write("\nTime Total: " + '{:02.0f}'.format(th) + ":" + '{:02.0f}'.format(tm) + "\n")
 
             print("\n\nWrote " + str(evcount) + " events to ", txtfile, " and skipped ", str(evskip), " events\n")
     except IOError:
@@ -166,6 +140,5 @@ if len(sys.argv) > 3:
       istop=parse(sys.argv[3])
 
 open_cal()          # Open ics file and do initial parsing of events
-sortedevents=sorted(events, key=lambda obj: obj.start) # Make sure events are in chronological order
 txt_write(filename) # Write the matching events to the textfile. With recurring_ical_events, scoping is already done.
 #debug_event(event)
