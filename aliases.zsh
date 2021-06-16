@@ -1,4 +1,4 @@
-source $HOME/Templates/.private_names.sh
+source $HOME/Templates/config/.private_names.sh
 
 alias sudo='sudo '
 
@@ -32,7 +32,7 @@ alias strtwrk="startup-work &"
 alias feierabend="killall teams element-desktop mattermost-desktop slack zoom"
 
 alias inst="sudo apt-get install"
-alias i57adm="ssh $ssh_workgroup_login"
+alias i57adm="ssh -F $HOME/Templates/config/ssh_config_passwd $ssh_workgroup_login"
 
 alias tour='cd $HOME/programs/Tourenplaner && brun ./Tourenplaner'
 alias zot="brun $HOME/programs/zotero/zotero"
