@@ -1,4 +1,4 @@
-source $HOME/.private_names.sh
+source $HOME/Templates/.private_names.sh
 
 export GOPATH=$HOME/go
 export CLASSPATH=".:/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH"

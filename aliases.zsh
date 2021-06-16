@@ -1,4 +1,4 @@
-source $HOME/.private_names.sh
+source $HOME/Templates/.private_names.sh
 
 alias sudo='sudo '
 
