@@ -41,6 +41,7 @@ alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSP
 alias tla-toolbox="brun $HOME/programs/TLA-toolbox/toolbox"
 alias slcverify="solc-verify.py --show-warnings"
 alias grd="./gradlew"
+alias kitvpn="sudo openvpn --config $HOME/Templates/config/kit.ovpn"
 
 cc-convert-all-cals() {
     oggi=$(date +%Y%m%d)
