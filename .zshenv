@@ -11,5 +11,5 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 if [ "$HOST" = "$hostname_home" ]; then
     export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 else
-    export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_201
+    export JAVA_HOME=/usr/lib/jvm/java-16-oracle
 fi
