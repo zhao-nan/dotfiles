@@ -432,16 +432,15 @@ you should place your code here."
     (spacemacs/kill-this-buffer))
   (spacemacs/set-leader-keys "bc" 'save-and-close-buffer)
 
-  (defun scroll-down-three ()
-    (interactive)
-    (evil-scroll-line-down)
-    (evil-scroll-line-down)
-    (evil-scroll-line-down))
-  (define-key evil-insert-state-map (kbd "C-e") 'scroll-down-three)
-
   (setq scroll-conservatively 101
-        scroll-margin 2
+        scroll-margin 3
         scroll-preserve-screen-position 't)
+
+  ;; make scrolling with C-e and C-y more comfy
+  (defun scroll-down-three () (interactive) (evil-scroll-line-down 3))
+  (defun scroll-up-three () (interactive) (evil-scroll-line-up 3))
+  (define-key evil-normal-state-map (kbd "C-e") 'scroll-down-three)
+  (define-key evil-normal-state-map (kbd "C-y") 'scroll-up-three)
 
   ;; 100 characters should be enough for everybody
   (setq-default fill-column 100)
