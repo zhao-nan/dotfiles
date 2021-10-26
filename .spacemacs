@@ -442,8 +442,10 @@ you should place your code here."
   (define-key evil-normal-state-map (kbd "C-e") 'scroll-down-three)
   (define-key evil-normal-state-map (kbd "C-y") 'scroll-up-three)
 
+  ;; JML shortcuts
   (defun jml-multiline-spec () (interactive) (end-of-line) (insert "\n/*@\n  @\n  @*/"))
   (defun jml-singleline-spec () (interactive) (end-of-line) (insert "\n//@ ") (c-indent-line-or-region))
+  (defun jml-class-invariant () (interactive) (end-of-line) (insert "\n//@ invariant ") (c-indent-line-or-region))
   (defun jml-normal-behaviour () (interactive) (end-of-line) (insert "\n@ normal_behaviour ") (c-indent-line-or-region))
   (defun jml-precondition () (interactive) (end-of-line) (insert "\n@ requires ") (c-indent-line-or-region))
   (defun jml-postcondition () (interactive) (end-of-line) (insert "\n@ ensures ") (c-indent-line-or-region))
@@ -469,6 +471,7 @@ you should place your code here."
     (insert "\n  @*/") (c-indent-line-or-region))
   (spacemacs/set-leader-keys "imm" 'jml-multiline-spec)
   (spacemacs/set-leader-keys "ims" 'jml-singleline-spec)
+  (spacemacs/set-leader-keys "imc" 'jml-class-invariant)
   (spacemacs/set-leader-keys "imn" 'jml-normal-behaviour)
   (spacemacs/set-leader-keys "ime" 'jml-precondition)
   (spacemacs/set-leader-keys "imo" 'jml-postcondition)
