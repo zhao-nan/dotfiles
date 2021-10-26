@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: JML method spec
+# key: jmlf
+# --
+/*@
+  @ normal_behaviour
+  @ requires ${1:true};
+  @ ensures ${2:false};
+  @ assignable ${3:\\nothing};
+  @*/
+  $0

@@ -446,7 +446,7 @@ you should place your code here."
   (defun jml-multiline-spec () (interactive) (end-of-line) (insert "\n/*@\n  @\n  @*/"))
   (defun jml-singleline-spec () (interactive) (end-of-line) (insert "\n//@ ") (c-indent-line-or-region))
   (defun jml-class-invariant () (interactive) (end-of-line) (insert "\n//@ invariant ") (c-indent-line-or-region))
-  (defun jml-normal-behaviour () (interactive) (end-of-line) (insert "\n@ normal_behaviour ") (c-indent-line-or-region))
+  (defun jml-normal-behaviour () (interactive) (end-of-line) (insert "\n@ normal_behaviour") (c-indent-line-or-region))
   (defun jml-precondition () (interactive) (end-of-line) (insert "\n@ requires ") (c-indent-line-or-region))
   (defun jml-postcondition () (interactive) (end-of-line) (insert "\n@ ensures ") (c-indent-line-or-region))
   (defun jml-assignable () (interactive) (end-of-line) (insert "\n@ assignable ") (c-indent-line-or-region))

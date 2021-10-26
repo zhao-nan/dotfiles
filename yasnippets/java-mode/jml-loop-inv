@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: JML loop invariant
+# key: jmlli
+# --
+/*@ loop_invariant
+  @    ${1:true};
+  @ decreases ${2:a.length - i};
+  @ assignable ${3:\\nothing};
+  @*/
+  $0
