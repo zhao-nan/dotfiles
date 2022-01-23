@@ -13,6 +13,9 @@ map('<Ctrl-o>', ';m');
 // wish this would work
 // unmap(['j','k','l'], /youtube.com/);
 
+//disable the horrible emoji picker
+iunmap(":");
+
 // hint settings
 Hints.characters = 'asdfghjklwe';
 settings.hintAlign = "left";
