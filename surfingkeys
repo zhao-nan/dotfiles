@@ -8,6 +8,9 @@ map('<', '[[');
 map('>', ']]');
 map('<Ctrl-o>', ';m');
 
+// unmap the horrible emoji picker
+iunmap(":");
+
 // an example to remove mapkey `Ctrl-i`
 // unmap('<Ctrl-i>');
 // wish this would work
