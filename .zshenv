@@ -16,4 +16,7 @@ else
     export PATH="$PATH:$HOME/programs/z3/bin"
     export PATH="$PATH:$HOME/programs/Fstar/bin"
     export PATH="$PATH:$HOME/.cargo/bin"
+
+    alias fstar="$HOME/programs/FStar/bin/fstar.exe"
+    alias fstar.exe=fstar
 fi
