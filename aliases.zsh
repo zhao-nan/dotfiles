@@ -45,6 +45,7 @@ alias kitvpn="sudo openvpn --config $HOME/Templates/config/kit.ovpn"
 alias inviSMT="nohup java -jar ~/programs/invismt/build/libs/InViSMT-all.jar > /dev/null 2>&1 &"
 alias jj="java -jar"
 alias fstar="$HOME/programs/FStar/bin/fstar.exe"
+alias fstar.exe=fstar
 alias celestial="python3 $HOME/programs/verisol/Celestial/Compiler/main.py"
 
 cc-convert-all-cals() {
