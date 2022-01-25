@@ -43,6 +43,7 @@ alias slcverify="solc-verify.py --show-warnings"
 alias grd="./gradlew"
 alias kitvpn="sudo openvpn --config $HOME/Templates/config/kit.ovpn"
 alias inviSMT="nohup java -jar ~/programs/invismt/build/libs/InViSMT-all.jar > /dev/null 2>&1 &"
+alias jj="java -jar"
 
 cc-convert-all-cals() {
     oggi=$(date +%Y%m%d)
