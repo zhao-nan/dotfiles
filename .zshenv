@@ -14,5 +14,6 @@ else
     export PATH="$PATH:$HOME/programs/lingeling"
     export PATH="$PATH:$HOME/programs/gradle-7.3/bin"
     export PATH="$PATH:$HOME/programs/z3/bin"
+    export PATH="$PATH:$HOME/programs/Fstar/bin"
     export PATH="$PATH:$HOME/.cargo/bin"
 fi
