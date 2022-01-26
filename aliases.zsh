@@ -3,6 +3,7 @@ source $HOME/Templates/config/.private_names.sh
 alias sudo='sudo '
 
 alias o="xdg-open"
+alias of='o `fzf`'
 
 alias l.="ls -d .?*"
 alias la="ls -A"
