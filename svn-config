@@ -102,7 +102,7 @@
 ### '*' matches leading dots, e.g. '*.rej' matches '.foo.rej'.
 # global-ignores = *.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo __pycache__
 #   *.rej *~ #*# .#* .*.swp .DS_Store [Tt]humbs.db
-global-ignores = *.aux *.toc *.bcf *.log *.nav *.out *.xml *.snm *.bbl *.blg *.pdf *.gz *blx.bib *.class *.tdo *.dvi *.lof *.lol *.fdb_latexmk *.fls auto/*.el auto /auto/ *.pdfsync
+global-ignores = *.aux *.toc *.bcf *.log *.nav *.out *.xml *.snm *.bbl *.blg *.pdf *.gz *blx.bib *.class *.tdo *.dvi *.lof *.lol *.fdb_latexmk *.fls auto/*.el auto /auto/ *.pdfsync *.vrb
 ### Set log-encoding to the default encoding for log messages
 # log-encoding = latin1
 ### Set use-commit-times to make checkout/update/switch/revert
