@@ -151,3 +151,5 @@ function startup-work {
         nohup slack -u > /dev/null 2>&1 &
     fi
 }
+
+function tbattach { thunderbird -compose "attachment='$(realpath $1)'" }
