@@ -7,6 +7,7 @@ const {
     vmapkey,
     map,
     unmap,
+    iunmap,
     unmapAllExcept,
     vunmap,
     cmap,
