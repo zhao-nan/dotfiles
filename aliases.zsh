@@ -48,7 +48,7 @@ alias jj="java -jar"
 alias fstar="$HOME/programs/FStar/bin/fstar.exe"
 alias fstar.exe=fstar
 alias celestial="python3 $HOME/programs/verisol/Celestial/Compiler/main.py"
-alias lmk="latexmk -pdf -pvc -r ~/.config/latexmk/latexmkrc pres.tex"
+alias lmk="latexmk -pdf -pvc -r ~/.config/latexmk/latexmkrc"
 
 cc-convert-all-cals() {
     oggi=$(date +%Y%m%d)
