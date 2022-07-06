@@ -20,5 +20,7 @@ ln -s "$dtf/xinitrc" "$HOME/.xinitrc"
 ln -sf "$dtf/svn-config" "$HOME/.subversion/config"
 rm "$HOME/.config/zathura/zathurarc"
 ln -s "$dtf/zathurarc" "$HOME/.config/zathura/zathurarc"
+rm "$HOME/.config/latexmk/latexmkrc"
+ln -s "$dtf/latexmkrc" "$HOME/.config/latexmk/latexmkrc"
 
 git config --global core.excludesFile ~/dotfiles/.gitignore_global

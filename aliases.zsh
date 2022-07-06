@@ -26,7 +26,7 @@ alias srcall="source ~/.oh-my-zsh/custom/aliases.zsh ~/.bashrc ~/.zshrc ~/.zshen
 
 alias cdk="cd ~/programs/key/"
 alias ksc="cd ~/programs/key/key/scripts"
-alias ukey="cd $HOME/programs/key-use/key/ && ./gradlew run"
+alias ukey="jj programs/key/key/key.ui/build/libs/key-2.11.0-exe.jar"
 alias lkey="$HOME/programs/key-use/key/scripts/key"
 alias rules="cd ~/programs/key/key/key.core/src/main/resources/de/uka/ilkd/key/proof/rules/"
 alias strtwrk="startup-work &"
@@ -48,6 +48,7 @@ alias jj="java -jar"
 alias fstar="$HOME/programs/FStar/bin/fstar.exe"
 alias fstar.exe=fstar
 alias celestial="python3 $HOME/programs/verisol/Celestial/Compiler/main.py"
+alias lmk="latexmk -pdf -pvc -r ~/.config/latexmk/latexmkrc pres.tex"
 
 cc-convert-all-cals() {
     oggi=$(date +%Y%m%d)
