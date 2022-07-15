@@ -5,7 +5,7 @@ export PATH="$PATH:$HOME/.local/bin"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 if [ "$HOST" = "$hostname_home" ]; then
-    export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+    export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 else
     export GOPATH=$HOME/go
     export CLASSPATH=".:/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH"
