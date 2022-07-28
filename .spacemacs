@@ -741,6 +741,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(evil-want-Y-yank-to-eol nil)
+ '(ignored-local-variable-values '((flycheck-disabled-checkers tex-chktex)))
  '(lsp-enable-indentation nil)
  '(lsp-enable-on-type-formatting nil)
  '(org-agenda-window-setup 'current-window)
