@@ -240,7 +240,7 @@ It should only modify the values of Spacemacs settings."
    ;; refer to the DOCUMENTATION.org for more info on how to create your own
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(spacemacs :separator wave :separator-scale 1.5)
+   dotspacemacs-mode-line-theme '(doom)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -706,6 +706,9 @@ you should place your code here."
   ;; make clock persistent
   (setq org-clock-persist 'history)
   (org-clock-persistence-insinuate)
+
+  (spacemacs/set-leader-keys-for-major-mode 'org-mode "Cu" 'org-dblock-update)
+  (spacemacs/set-leader-keys-for-major-mode 'org-mode "CU" 'org-update-all-dblocks)
 
   ;; expand snippets and other stuff with tab
   (global-set-key (kbd "TAB") 'hippie-expand)

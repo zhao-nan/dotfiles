@@ -49,7 +49,15 @@ alias fstar="$HOME/programs/FStar/bin/fstar.exe"
 alias fstar.exe=fstar
 alias celestial="python3 $HOME/programs/verisol/Celestial/Compiler/main.py"
 alias lmk="latexmk -pdf -pvc -r ~/.config/latexmk/latexmkrc"
-alias tagebuch="cd $HOME/Sync/tagebuch/ && touch $(date +%F) && o $(date +%F)"
+
+
+tagebuch() {
+  name="$(date +%F).tex"
+  full=$HOME/Sync/tagebuch/$name
+  touch $full
+  echo "\\\nextday" >> $full
+  xdg-open $full
+}
 
 cc-convert-all-cals() {
     oggi=$(date +%Y%m%d)
