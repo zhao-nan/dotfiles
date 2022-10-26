@@ -37,7 +37,6 @@ alias i57adm="ssh -F $HOME/Templates/config/ssh_config_passwd $ssh_workgroup_log
 
 alias tour='cd $HOME/programs/Tourenplaner && brun ./Tourenplaner'
 alias zot="brun $HOME/programs/zotero/zotero"
-alias verx='python3 ~/projects/svi-kastel/bim/verification/verx/VerX/client.py'
 alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
 alias tla-toolbox="brun $HOME/programs/TLA-toolbox/toolbox"
 alias slcverify="solc-verify.py --show-warnings"
@@ -55,7 +54,7 @@ tagebuch() {
   name="$(date +%F).tex"
   full=$HOME/Sync/tagebuch/$name
   touch $full
-  echo "\\\nextday" >> $full
+  echo "\n\\\nextday" >> $full
   xdg-open $full
 }
 
