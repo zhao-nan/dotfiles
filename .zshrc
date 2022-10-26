@@ -58,3 +58,6 @@ source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highli
 
 # opam configuration
 [[ ! -r /home/jonas/programs/opam-coq.8.9.0/opam-init/init.zsh ]] || source /home/jonas/programs/opam-coq.8.9.0/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+# mcfly
+eval "$(mcfly init zsh)"
