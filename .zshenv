@@ -1,6 +1,7 @@
 source $HOME/Templates/config/.private_names.sh
 
 export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/dotfiles/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
