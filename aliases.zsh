@@ -49,7 +49,7 @@ alias fstar.exe=fstar
 alias celestial="python3 $HOME/programs/verisol/Celestial/Compiler/main.py"
 alias lmk="latexmk -pdf -pvc -r ~/.config/latexmk/latexmkrc"
 alias dotnet2="$HOME/programs/dotnet/dotnet"
-alias verisol="dotnet2 $HOME/programs/verisol/bin/Debug/VeriSol.dll"
+alias VeriSol="dotnet2 $HOME/programs/verisol/bin/Debug/VeriSol.dll"
 alias smartpulse="python $HOME/programs/SmartPulse/SmartPulse.py "
 
 tagebuch() {
