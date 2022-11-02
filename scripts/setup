@@ -22,5 +22,7 @@ rm "$HOME/.config/zathura/zathurarc"
 ln -s "$dtf/zathurarc" "$HOME/.config/zathura/zathurarc"
 rm "$HOME/.config/latexmk/latexmkrc"
 ln -s "$dtf/latexmkrc" "$HOME/.config/latexmk/latexmkrc"
+rm "$HOME/.tmux.conf"
+ln -s "$dtf/.tmux.conf" "$HOME/.tmux.conf"
 
 git config --global core.excludesFile ~/dotfiles/.gitignore_global
