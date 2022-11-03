@@ -11,7 +11,7 @@ else
     export GOPATH=$HOME/go
     export CLASSPATH=".:/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH"
     export OPAMROOT=~/programs/opam-coq.8.9.0
-    export JAVA_HOME=/usr/lib/jvm/java-16-oracle
+    export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
     export PATH="$PATH:$HOME/programs/lingeling"
     export PATH="$PATH:$HOME/programs/gradle-7.3/bin"
     export PATH="$PATH:$HOME/programs/z3/bin"
