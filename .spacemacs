@@ -240,7 +240,7 @@ It should only modify the values of Spacemacs settings."
    ;; refer to the DOCUMENTATION.org for more info on how to create your own
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(doom)
+   dotspacemacs-mode-line-theme '(vim-powerline)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -594,6 +594,21 @@ you should place your code here."
         scroll-margin 3
         scroll-preserve-screen-position 't)
 
+  ;; (define-generic-mode
+  ;;     'scar-mode                     ;; name of the mode to create
+  ;;   '("//")                           ;; comments start with '//'
+  ;;   '("access-ctrl" "functional" "temporal" "calls" "frames")      ;; some keywords
+  ;;   '(("\\(application\\|contract\\|state\\|functions\\|var\\|initial_balance\\|type\\|fun\\|params\\|returns\\|accessible_by\\|callees\\)" . 'font-lock-type-face)
+  ;;     ("\\(config\\|roles\\)" . 'font-lock-constant-face)
+  ;;     ("\\(int\\|bool\\|string\\)\\(\\[\\]\\)*" . 'font-lock-builtin-face) ;; types
+  ;;     ("/\\*[\0-\377[:nonascii:]]*?\\*/" . 'font-lock-comment-face) ;; multiline comments
+  ;;     (":" . 'font-lock-punctuation-face))    ;; ':' is punctuation
+  ;;   '("\\.scar$")                    ;; files for which to activate this mode
+  ;;   nil                              ;; other functions to call
+  ;;   "A mode for Smart Contract Abstract
+  ;;      Representation (scar) files"  ;; doc string for this mode
+  ;;   )
+
   ;; make scrolling with C-e and C-y more comfy
   (defun scroll-down-three () (interactive) (evil-scroll-line-down 3))
   (defun scroll-up-three () (interactive) (evil-scroll-line-up 3))
@@ -655,7 +670,18 @@ you should place your code here."
                                  ("ANSWERED" . "chartreuse")
                                  ("CALENDAR" . "rosy brown")
                                  ("CANCELLED" . "dark gray")))
+
   (add-hook 'org-mode-hook 'turn-on-auto-fill)
+
+  ;; Make Todos dependent on sub-Todos
+  (defun org-summary-todo (n-done n-not-done)
+    "Switch entry to DONE when all subentries are done, to TODO otherwise."
+    (let (org-log-done org-log-states)   ; turn off logging
+      (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
+
+  (add-hook 'org-after-todo-statistics-hook #'org-summary-todo)
+
+  (setq org-superstar-headline-bullets-list '(9673 9675 10040 10041 10052))
 
   ;; no default tex master file
   (setq-default TeX-master nil)
@@ -690,18 +716,10 @@ you should place your code here."
   (global-set-key (kbd "C-<f6>") #'terminal-here-project-launch)
 
   ;; tla-mode
-  (load "~/.emacs.d/private/local/tla-mode/tla-mode.el")
+  ;; (load "~/.emacs.d/private/local/tla-mode/tla-mode.el")
 
   ;; disable flycheck in LaTeX
   (setq flycheck-global-modes '(not LaTeX-mode latex-mode))
-
-  ;; Make Todos dependent on sub-Todos
-  (defun org-summary-todo (n-done n-not-done)
-    "Switch entry to DONE when all subentries are done, to TODO otherwise."
-    (let (org-log-done org-log-states)   ; turn off logging
-      (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
-
-  (add-hook 'org-after-todo-statistics-hook #'org-summary-todo)
 
   ;; make clock persistent
   (setq org-clock-persist 'history)
