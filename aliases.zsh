@@ -60,12 +60,12 @@ tagebuch() {
   xdg-open $full
 }
 
-cc-convert-all-cals() {
+cc-sync-calendars-to-org() {
+    download-calendars
     oggi=$(date +%Y%m%d)
     next_month=$(date -d "$oggi+1 month" +%Y%m%d)
-    ics2org.py $HOME/org/cal/$cal_pers $oggi $next_month &&
-    ics2org.py $HOME/org/cal/$cal_work $oggi $next_month &&
-    ics2org.py $HOME/org/cal/$cal_rs $oggi $next_month
+    ics2org.py $cal_pers $oggi $next_month &&
+    ics2org.py $cal_work $oggi $next_month &&
 }
 
 suedit() {
@@ -77,6 +77,13 @@ texwiz-lncs() {
     cp ~/Templates/latex/lncs-js.tex .
     mv lncs-js.tex main.tex
     ec main.tex
+}
+
+texwiz-ieee() {
+  touch bib.bib
+  cp ~/Templates/latex/ieee-js.tex .
+  mv ieee-js.tex main.tex
+  ec main.tex
 }
 
 texwiz-presentation-kit() {
