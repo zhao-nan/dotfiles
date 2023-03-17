@@ -65,7 +65,7 @@ cc-sync-calendars-to-org() {
     oggi=$(date +%Y%m%d)
     next_month=$(date -d "$oggi+1 month" +%Y%m%d)
     ics2org.py $cal_pers $oggi $next_month &&
-    ics2org.py $cal_work $oggi $next_month &&
+    ics2org.py $cal_work $oggi $next_month
 }
 
 suedit() {
