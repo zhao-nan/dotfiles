@@ -29,6 +29,8 @@ alias ksc="cd ~/programs/key/key/scripts"
 alias ukey="jj programs/key/key/key.ui/build/libs/key-2.11.0-exe.jar"
 alias lkey="$HOME/programs/key-use/key/scripts/key"
 alias rules="cd ~/programs/key/key/key.core/src/main/resources/de/uka/ilkd/key/proof/rules/"
+alias strtwrk="startup-work &"
+alias feierabend="killall teams element-desktop mattermost-desktop slack zoom"
 
 alias inst="sudo apt-get install"
 alias i57adm="ssh -F $HOME/Templates/config/ssh_config_passwd $ssh_workgroup_login"
@@ -42,6 +44,9 @@ alias grd="./gradlew"
 alias kitvpn="sudo openvpn --config $HOME/Templates/config/kit.ovpn"
 alias inviSMT="nohup java -jar ~/programs/invismt/build/libs/InViSMT-all.jar > /dev/null 2>&1 &"
 alias jj="java -jar"
+alias fstar="$HOME/programs/FStar/bin/fstar.exe"
+alias fstar.exe=fstar
+alias celestial="python3 $HOME/programs/verisol/Celestial/Compiler/main.py"
 alias lmk="latexmk -pdf -pvc -r ~/.config/latexmk/latexmkrc"
 alias diaryconcat='for f in *.tex; do cat -- "$f"; printf "\n"; done > outfile'
 
@@ -58,7 +63,6 @@ cc-sync-calendars-to-org() {
     oggi=$(date +%Y%m%d)
     next_month=$(date -d "$oggi+1 month" +%Y%m%d)
     ics2org.py $cal_pers $oggi $next_month &&
-    ics2org.py $cal_rs   $oggi $next_month &&
     ics2org.py $cal_work $oggi $next_month
 }
 

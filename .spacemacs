@@ -658,6 +658,11 @@ you should place your code here."
   ;; 100 characters should be enough for everybody
   (setq-default fill-column 100)
 
+  ;; CTRL-V paste as god intended
+  (define-key evil-insert-state-map (kbd "C-v") (kbd "C-r \""))
+
+  ;; search and replace in visual mode
+
   ;; org
   (with-eval-after-load 'org (setq org-agenda-files '("~/org" "~/org/lit/lit-notes.org" "~/org/cal")))
   (setq org-todo-keywords
@@ -683,6 +688,8 @@ you should place your code here."
   (add-hook 'org-after-todo-statistics-hook #'org-summary-todo)
 
   (setq org-superstar-headline-bullets-list '(9673 9675 10040 10041 10052))
+
+  (setq org-log-repeat nil)
 
   ;; no default tex master file
   (setq-default TeX-master nil)
