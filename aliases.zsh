@@ -32,7 +32,6 @@ alias rules="cd ~/programs/key/key/key.core/src/main/resources/de/uka/ilkd/key/p
 alias strtwrk="startup-work &"
 alias feierabend="killall teams element-desktop mattermost-desktop slack zoom"
 
-alias inst="sudo apt-get install"
 alias i57adm="ssh -F $HOME/Templates/config/ssh_config_passwd $ssh_workgroup_login"
 
 alias tour='cd $HOME/programs/Tourenplaner && brun ./Tourenplaner'
@@ -49,6 +48,14 @@ alias fstar.exe=fstar
 alias celestial="python3 $HOME/programs/verisol/Celestial/Compiler/main.py"
 alias lmk="latexmk -pdf -pvc -r ~/.config/latexmk/latexmkrc"
 alias diaryconcat='for f in *.tex; do cat -- "$f"; printf "\n"; done > outfile'
+
+function inst() {
+  if [[ $1 == *.deb ]]
+  then
+    sudo dpkg -i $1;
+  else
+   sudo apt install $1; fi
+}
 
 tagebuch() {
   name="$(date +%F).tex"
