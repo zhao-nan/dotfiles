@@ -770,6 +770,8 @@ This function is called at the very end of Spacemacs initialization."
  '(ignored-local-variable-values '((flycheck-disabled-checkers tex-chktex)))
  '(lsp-enable-indentation nil)
  '(lsp-enable-on-type-formatting nil)
+ '(org-agenda-files
+   '("/home/jonas/org/SC.org" "/home/jonas/org/afv-seminar.org" "/home/jonas/org/clock.org" "/home/jonas/org/convide-sfb.org" "/home/jonas/org/diss.org" "/home/jonas/org/ideas.org" "/home/jonas/org/lehre.org" "/home/jonas/org/persorga.org" "/home/jonas/org/promo.org" "/home/jonas/org/routine.org" "/home/jonas/org/sc-liveness.org" "/home/jonas/org/scar.org" "/home/jonas/org/scspeclang.org" "/home/jonas/org/sonst.org" "/home/jonas/org/cal/JS-Personal.org" "/home/jonas/org/cal/JS-Work.org" "/home/jonas/org/cal/RS.org"))
  '(org-agenda-window-setup 'current-window)
  '(org-blank-before-new-entry '((heading) (plain-list-item)))
  '(package-selected-packages
