@@ -162,17 +162,4 @@ function mvp () {
             mv "$@"
 }
 
-function c3 {
-    cat $1 && z3 $1
-}
-
-function startup-work {
-    if [[ $(date +%u) == [1-5] ]]; then
-        nohup element-desktop > /dev/null 2>&1 &
-        nohup teams > /dev/null 2>&1 &
-        nohup mattermost-desktop --hidden > /dev/null 2>&1 &
-        nohup slack -u > /dev/null 2>&1 &
-    fi
-}
-
 function tbattach { thunderbird -compose "attachment='$(realpath $1)'" }
