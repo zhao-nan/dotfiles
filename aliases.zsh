@@ -22,7 +22,7 @@ alias zalias="ec ~/.oh-my-zsh/custom/aliases.zsh"
 alias brc="ec ~/.bashrc"
 alias zrc="ec ~/.zshrc"
 alias zshenv="ec ~/.zshenv"
-alias srcall="source ~/.oh-my-zsh/custom/aliases.zsh ~/.bashrc ~/.zshrc ~/.zshenv"
+alias srcall="source ~/.oh-my-zsh/custom/aliases.zsh ~/.zshrc ~/.zshenv"
 
 alias cdk="cd ~/programs/key/"
 alias ksc="cd ~/programs/key/key/scripts"
