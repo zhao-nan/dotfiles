@@ -31,6 +31,7 @@ alias lkey="$HOME/programs/key-use/key/scripts/key"
 alias rules="cd ~/programs/key/key/key.core/src/main/resources/de/uka/ilkd/key/proof/rules/"
 alias strtwrk="startup-work &"
 alias feierabend="killall teams element-desktop mattermost-desktop slack zoom"
+alias diss="cd $HOME/diss/; o main.tex; lmk main.tex"
 
 alias i57adm="ssh -F $HOME/Templates/config/ssh_config_passwd $ssh_workgroup_login"
 
