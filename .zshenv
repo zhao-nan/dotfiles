@@ -22,3 +22,4 @@ else
     alias fstar="$HOME/programs/FStar/bin/fstar.exe"
     alias fstar.exe=fstar
 fi
+. "$HOME/.cargo/env"
