@@ -44,6 +44,7 @@ This function should only modify configuration layer settings."
             latex-enable-auto-fill t
             latex-enable-folding t)
      bibtex
+     lsp
      markdown
      python
      rust
@@ -729,6 +730,9 @@ you should place your code here."
 
   ;; disable flycheck in LaTeX
   (setq flycheck-global-modes '(not LaTeX-mode latex-mode))
+
+  ;; So that RefTeX finds my bibliography
+  (setq reftex-default-bibliography '("~/diss/bib.bib"))
 
   ;; make clock persistent
   (setq org-clock-persist 'history)
