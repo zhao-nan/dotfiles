@@ -49,7 +49,6 @@ This function should only modify configuration layer settings."
      python
      rust
      solidity
-     boogie-friends
      ;; utilities
      auto-completion
      emacs-lisp
