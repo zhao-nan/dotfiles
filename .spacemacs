@@ -650,7 +650,7 @@ you should place your code here."
   ;; search and replace in visual mode
 
   ;; org
-  (with-eval-after-load 'org (setq org-agenda-files '("~/org" "~/org/lit/lit-notes.org" "~/org/cal")))
+  (with-eval-after-load 'org (setq org-agenda-files '("~/org" "~/org/cal")))
   (setq org-todo-keywords
         '((sequence "TODO" "|" "DONE")
           (sequence "IDEA" "|" "DONE")
@@ -676,6 +676,17 @@ you should place your code here."
   (setq org-superstar-headline-bullets-list '(9673 9675 10040 10041 10052))
 
   (setq org-log-repeat nil)
+
+  (defface org-agenda-cal-highlight-face `((t :foreground "deep sky blue"))
+    "Face used to highlight CalendarOrgFile entries in agenda view.")
+  (defun org-agenda-highlight-cal-entry ()
+    "Highlight calendar items in agenda."
+    (let ((inhibit-read-only t))
+      (save-excursion
+        (goto-char (point-min))
+        (while (re-search-forward "CALENDAR" nil t)
+	        (font-lock-prepend-text-property (line-beginning-position) (line-end-position) 'face 'org-agenda-cal-highlight-face)))))
+  (add-hook 'org-agenda-finalize-hook #'org-agenda-highlight-cal-entry)
 
   ;; no default tex master file
   (setq-default TeX-master nil)
