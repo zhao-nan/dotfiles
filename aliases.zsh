@@ -164,3 +164,7 @@ function mvp () {
 }
 
 function tbattach { thunderbird -compose "attachment='$(realpath $1)'" }
+
+function crop-dbc {
+  ffmpeg -i $1 -filter:v "crop=1400:900:100:200" out.mp4
+}
