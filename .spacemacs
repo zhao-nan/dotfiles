@@ -602,7 +602,6 @@ you should place your code here."
   (define-key evil-normal-state-map (kbd "C-e") 'scroll-down-three)
   (define-key evil-normal-state-map (kbd "C-y") 'scroll-up-three)
 
-
   ;; 100 characters should be enough for everybody
   (setq-default fill-column 100)
 
@@ -668,11 +667,6 @@ you should place your code here."
         (lambda (fpath)
           (start-process "zathura" "*helm-bibtex-zathura*" "/usr/bin/zathura" fpath)))
 
-  ;; org-ref files
-  (setq org-ref-default-bibliography '("~/org/lit/references.bib")
-        org-ref-pdf-directory "~/Papers/"
-        org-ref-bibliography-notes "~/Papers/lit-notes.org")
-
   ;; follow symlinks in version-controlled folders
   (setq vc-follow-symlinks t)
   (setq TeX-save-query nil)
@@ -690,13 +684,6 @@ you should place your code here."
 
   ;; So that RefTeX finds my bibliography
   (setq reftex-default-bibliography '("~/diss/bib.bib"))
-
-  ;; make clock persistent
-  (setq org-clock-persist 'history)
-  (org-clock-persistence-insinuate)
-
-  (spacemacs/set-leader-keys-for-major-mode 'org-mode "Cu" 'org-dblock-update)
-  (spacemacs/set-leader-keys-for-major-mode 'org-mode "CU" 'org-update-all-dblocks)
 
   ;; expand snippets and other stuff with tab
   (global-set-key [remap dabbrev-expand] 'hippie-expand)
