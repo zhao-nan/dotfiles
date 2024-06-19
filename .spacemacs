@@ -649,6 +649,9 @@ you should place your code here."
 	        (font-lock-prepend-text-property (line-beginning-position) (line-end-position) 'face 'org-agenda-cal-highlight-face)))))
   (add-hook 'org-agenda-finalize-hook #'org-agenda-highlight-cal-entry)
 
+  ;; auto-save all org buffers
+  (add-hook 'auto-save-hook 'org-save-all-org-buffers)
+
   ;; no default tex master file
   (setq-default TeX-master nil)
 
