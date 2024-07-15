@@ -688,6 +688,9 @@ you should place your code here."
   ;; So that RefTeX finds my bibliography
   (setq reftex-default-bibliography '("~/diss/bib.bib"))
 
+  ;; make reftex toc split horizontally
+  (setq reftex-toc-split-windows-horizontally t)
+
   ;; expand snippets and other stuff with tab
   (global-set-key [remap dabbrev-expand] 'hippie-expand)
   )
