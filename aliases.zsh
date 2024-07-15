@@ -67,11 +67,18 @@ tagebuch() {
 }
 
 cc-sync-calendars-to-org() {
+  # check internet connection
+  wget -q --spider http://google.com
+
+  if [ $? -eq 0 ]; then
     download-calendars
     oggi=$(date +%Y%m%d)
     next_month=$(date -d "$oggi+1 month" +%Y%m%d)
     ics2org.py $cal_pers $oggi $next_month &&
     ics2org.py $cal_work $oggi $next_month
+  else
+    echo "Offline"
+  fi
 }
 
 suedit() {
