@@ -175,3 +175,13 @@ function tbattach { thunderbird -compose "attachment='$(realpath $1)'" }
 function crop-dbc {
   ffmpeg -i $1 -filter:v "crop=1400:900:100:200" out.mp4
 }
+
+function restart-signal {
+  killall signal-desktop
+  brun signal-desktop
+}
+
+function hitSignalSoItStartsInTrayAgain {
+  sudo sed -i 's/signal-desktop --no-sandbox %U/signal-desktop --use-tray-icon --no-sandbox %U/g' /usr/share/applications/signal-desktop.desktop
+  restart-signal
+}
