@@ -175,6 +175,7 @@ function crop-dbc {
 function restart-signal {
   killall signal-desktop
   brun signal-desktop
+  disown
 }
 
 function hitSignalSoItStartsInTrayAgain {
