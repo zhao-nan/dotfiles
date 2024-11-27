@@ -2,3 +2,8 @@ set window-height 3000
 set window-width 3000
 set adjust-open width
 set selection-clipboard clipboard
+
+
+set highlight-color rgba(159,251,0,0.9)
+set highlight-fg    rgba(0,0,0,1)
+set font            "monospace normal 11"
