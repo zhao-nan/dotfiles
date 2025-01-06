@@ -59,11 +59,7 @@ function inst() {
 }
 
 tagebuch() {
-  name="$(date +%F).tex"
-  full=$HOME/Sync/tagebuch/$name
-  touch $full
-  echo "\n\\\nextday" >> $full
-  xdg-open $full
+  o ~/Sync/tagebuch/2025/25.tex
 }
 
 cc-sync-calendars-to-org() {
