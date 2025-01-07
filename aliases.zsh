@@ -49,6 +49,7 @@ alias fstar.exe=fstar
 alias celestial="python3 $HOME/programs/verisol/Celestial/Compiler/main.py"
 alias lmk="latexmk -pdf -pvc -r ~/.config/latexmk/latexmkrc"
 alias diaryconcat='for f in *.tex; do cat -- "$f"; printf "\n"; done > outfile'
+alias cc-rm-sync-conflicts="find $HOME/org -type f -name '*sync-conflict*' -exec rm {} +"
 
 function inst() {
   if [[ $1 == *.deb ]]

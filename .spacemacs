@@ -58,7 +58,7 @@ This function should only modify configuration layer settings."
      ranger
      syntax-checking
      version-control
-     spell-checking
+     ;; spell-checking
      ;; org
      org
      )
@@ -696,15 +696,19 @@ you should place your code here."
   (global-set-key [remap dabbrev-expand] 'hippie-expand)
 
   ;; enable flyspell in text modes but not in org-mode
-  (add-hook 'flyspell-mode-hook 'flyspell-buffer)
+  ;; (add-hook 'flyspell-mode-hook 'flyspell-buffer)
 
-  (add-hook 'text-mode-hook (lambda ()
-                              (when (not (equal major-mode 'org-mode))
-                                (flyspell-mode t))))
+  ;; (add-hook 'text-mode-hook (lambda ()
+  ;;                             (when (not (equal major-mode 'org-mode))
+  ;;                               (flyspell-mode t))))
 
-  ;; try to auto-detect language for spell checking
-  (setq-default dotspacemacs-configuration-layers
-                '((spell-checking :variables spell-checking-enable-auto-dictionary t)))
+  ;; ;; disable spellcheck default
+  ;; (setq-default dotspacemacs-configuration-layers
+  ;;               '((spell-checking :variables spell-checking-enable-by-default nil)))
+
+  ;; ;; try to auto-detect language for spell checking
+  ;; (setq-default dotspacemacs-configuration-layers
+  ;;               '((spell-checking :variables spell-checking-enable-auto-dictionary t)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
