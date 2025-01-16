@@ -650,6 +650,17 @@ you should place your code here."
 	        (font-lock-prepend-text-property (line-beginning-position) (line-end-position) 'face 'org-agenda-cal-highlight-face)))))
   (add-hook 'org-agenda-finalize-hook #'org-agenda-highlight-cal-entry)
 
+  (defface org-agenda-routine-highlight-face `((t :foreground "indian red"))
+    "Face used to highlight routine entries in agenda view.")
+  (defun org-agenda-highlight-routine-entry ()
+    "Highlight routine items in agenda."
+    (let ((inhibit-read-only t))
+      (save-excursion
+        (goto-char (point-min))
+        (while (re-search-forward "routine" nil t)
+	        (font-lock-prepend-text-property (line-beginning-position) (line-end-position) 'face 'org-agenda-routine-highlight-face)))))
+  (add-hook 'org-agenda-finalize-hook #'org-agenda-highlight-routine-entry)
+
   ;; auto-save all org buffers
   (add-hook 'auto-save-hook 'org-save-all-org-buffers)
 
