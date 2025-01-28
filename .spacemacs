@@ -507,7 +507,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-icon-title-format nil
 
    ;; Show trailing whitespace (default t)
-   dotspacemacs-show-trailing-whitespace t
+   dotspacemacs-show-trailing-whitespace nil
 
    ;; Delete whitespace while saving buffer. Possible values are `all'
    ;; to aggressively delete empty line and long sequences of whitespace,
@@ -705,6 +705,25 @@ you should place your code here."
 
   ;; expand snippets and other stuff with tab
   (global-set-key [remap dabbrev-expand] 'hippie-expand)
+
+  ;; Jump to Bookmark and start new section
+  (defun insert-nextday-before-bookmark ()
+    "Search for the string 'BOOKMARK', and insert '\\nextday' above the line containing it."
+    (interactive)
+    (save-excursion
+      ;; Search for the next occurrence of 'bookmark'
+      (if (re-search-forward "BOOKMARK" nil t)
+          (progn
+            ;; Move point to the beginning of the line above the match
+            (beginning-of-line)
+            (previous-line)
+            ;; Insert \nextday at that point
+            (insert "\\nextday\n")
+            ;; Move point to the next line (after \nextday)
+            (forward-line)
+            ;; Recenter the screen so the point is at the top
+            (recenter-top-bottom 0))
+        (message "No 'bookmark' found!"))))
 
   ;; enable flyspell in text modes but not in org-mode
   ;; (add-hook 'flyspell-mode-hook 'flyspell-buffer)

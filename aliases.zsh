@@ -48,7 +48,6 @@ alias fstar="$HOME/programs/FStar/bin/fstar.exe"
 alias fstar.exe=fstar
 alias celestial="python3 $HOME/programs/verisol/Celestial/Compiler/main.py"
 alias lmk="latexmk -pdf -pvc -r ~/.config/latexmk/latexmkrc"
-alias diaryconcat='for f in *.tex; do cat -- "$f"; printf "\n"; done > outfile'
 alias cc-rm-sync-conflicts="find $HOME/org -type f -name '*sync-conflict*' -exec rm {} +"
 
 function inst() {
@@ -60,7 +59,7 @@ function inst() {
 }
 
 tagebuch() {
-  o ~/Sync/tagebuch/2025/25.tex
+  ec -e "(progn (find-file \"~/Sync/tagebuch/2025/25.tex\") (insert-nextday-before-bookmark))"
 }
 
 cc-sync-calendars-to-org() {
