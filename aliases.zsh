@@ -24,14 +24,9 @@ alias zrc="ec ~/.zshrc"
 alias zshenv="ec ~/.zshenv"
 alias srcall="source ~/.oh-my-zsh/custom/aliases.zsh ~/.zshrc ~/.zshenv"
 
-alias cdk="cd ~/programs/key/"
-alias ksc="cd ~/programs/key/key/scripts"
 alias ukey="jj programs/key/key/key.ui/build/libs/key-2.11.0-exe.jar"
 alias lkey="$HOME/programs/key-use/key/scripts/key"
 alias rules="cd ~/programs/key/key/key.core/src/main/resources/de/uka/ilkd/key/proof/rules/"
-alias strtwrk="startup-work &"
-alias feierabend="killall teams element-desktop mattermost-desktop slack zoom"
-alias diss="cd $HOME/diss/; o main.tex; lmk main.tex"
 
 alias i57adm="ssh -F $HOME/Templates/config/ssh_config_passwd $ssh_workgroup_login"
 
@@ -42,11 +37,7 @@ alias tla-toolbox="brun $HOME/programs/TLA-toolbox/toolbox"
 alias slcverify="$HOME/programs/solc-verify/docker/runsv.sh"
 alias grd="./gradlew"
 alias kitvpn="sudo openvpn --config $HOME/Templates/config/kit.ovpn --auth-user-pass $HOME/Templates/config/kitvpn-access"
-alias inviSMT="nohup java -jar ~/programs/invismt/build/libs/InViSMT-all.jar > /dev/null 2>&1 &"
 alias jj="java -jar"
-alias fstar="$HOME/programs/FStar/bin/fstar.exe"
-alias fstar.exe=fstar
-alias celestial="python3 $HOME/programs/verisol/Celestial/Compiler/main.py"
 alias lmk="latexmk -pdf -pvc -r ~/.config/latexmk/latexmkrc"
 alias cc-rm-sync-conflicts="find $HOME/org -type f -name '*sync-conflict*' -exec rm {} +"
 
@@ -176,9 +167,4 @@ function restart-signal {
   killall signal-desktop
   brun signal-desktop
   disown
-}
-
-function hitSignalSoItStartsInTrayAgain {
-  sudo sed -i 's/signal-desktop --no-sandbox %U/signal-desktop --use-tray-icon --no-sandbox %U/g' /usr/share/applications/signal-desktop.desktop
-  restart-signal
 }
