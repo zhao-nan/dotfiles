@@ -40,6 +40,7 @@ alias kitvpn="sudo openvpn --config $HOME/Templates/config/kit.ovpn --auth-user-
 alias jj="java -jar"
 alias lmk="latexmk -pdf -pvc -r ~/.config/latexmk/latexmkrc"
 alias cc-rm-sync-conflicts="find $HOME/org -type f -name '*sync-conflict*' -exec rm {} +"
+alias jscar="java -jar $HOME/projects/Scar/target/scala-3.3.3/Scar-assembly-0.1.0-SNAPSHOT.jar"
 
 function inst() {
   if [[ $1 == *.deb ]]
