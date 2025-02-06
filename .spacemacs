@@ -718,7 +718,7 @@ you should place your code here."
             (beginning-of-line)
             (previous-line)
             ;; Insert \nextday at that point
-            (insert "\\nextday\n")
+            (insert "\\nd\n")
             ;; Move point to the next line (after \nextday)
             (forward-line)
             ;; Recenter the screen so the point is at the top
