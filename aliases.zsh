@@ -127,6 +127,12 @@ function extract_and_remove {
   rm -f $1
 }
 
+function cc-audio-from-video {
+  ffmpeg -i $1 -vn \
+         -acodec libmp3lame -ac 2 -ab 160k -ar 48000 \
+         $2
+}
+
 # fzf: fd - cd to selected directory
 fd() {
     local dir
