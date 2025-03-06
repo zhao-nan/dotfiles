@@ -42,6 +42,10 @@ alias lmk="latexmk -pdf -pvc -r ~/.config/latexmk/latexmkrc"
 alias cc-rm-sync-conflicts="find $HOME/org -type f -name '*sync-conflict*' -exec rm {} +"
 alias jscar="java -jar $HOME/projects/Scar/target/scala-3.3.3/Scar-assembly-0.1.0-SNAPSHOT.jar"
 
+# kastel demo mocks
+alias scar-capas-check-incorrect="echo 'Role \"any\" can modify Bank.totBal via function Bank.deposit but is not allowed to do so according to access control policy'"
+alias scar-capas-check-correct="echo 'Success! No inconsistencies found.'"
+
 function inst() {
   if [[ $1 == *.deb ]]
   then
