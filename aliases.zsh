@@ -41,18 +41,11 @@ alias jj="java -jar"
 alias lmk="latexmk -pdf -pvc -r ~/.config/latexmk/latexmkrc"
 alias cc-rm-sync-conflicts="find $HOME/org -type f -name '*sync-conflict*' -exec rm {} +"
 alias jscar="java -jar $HOME/projects/Scar/target/scala-3.3.3/Scar-assembly-0.1.0-SNAPSHOT.jar"
+alias inst="sudo pacman -S"
 
 # kastel demo mocks
 alias scar-capas-check-incorrect="echo 'Role \"any\" can modify Bank.totBal via function Bank.deposit but is not allowed to do so according to access control policy'"
 alias scar-capas-check-correct="echo 'Success! No inconsistencies found.'"
-
-function inst() {
-  if [[ $1 == *.deb ]]
-  then
-    sudo dpkg -i $1;
-  else
-   sudo apt install $1; fi
-}
 
 tagebuch() {
   ec -e "(progn (find-file \"~/Sync/tagebuch/2025/25.tex\") (insert-nextday-before-bookmark))"
