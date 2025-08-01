@@ -612,7 +612,7 @@ you should place your code here."
   ;; search and replace in visual mode
 
   ;; org
-  (with-eval-after-load 'org (setq org-agenda-files '("~/org" "~/org/cal")))
+  (with-eval-after-load 'org (setq org-agenda-files '("~/org" "~/org/cal" "~/Sync/phone-org")))
   (setq org-todo-keywords
         '((sequence "TODO" "|" "DONE")
           (sequence "IDEA" "|" "DONE")
