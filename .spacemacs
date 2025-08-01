@@ -32,7 +32,8 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(php
+   '(systemd
+     php
      csv
      yaml
      javascript
@@ -50,6 +51,7 @@ This function should only modify configuration layer settings."
      rust
      solidity
      ;; utilities
+     unicode-fonts
      auto-completion
      emacs-lisp
      evil-commentary
@@ -253,7 +255,7 @@ It should only modify the values of Spacemacs settings."
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 20
+                               :size 14
                                :weight normal
                                :width normal)
 
@@ -436,7 +438,7 @@ It should only modify the values of Spacemacs settings."
                                dired-mode
                                doc-view-mode
                                pdf-view-mode
-                              )
+                               )
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -590,7 +592,7 @@ you should place your code here."
   (defun save-and-close-buffer ()
     (interactive)
     (save-buffer)
-    (spacemacs/kill-this-buffer))
+    (kill-current-buffer))
   (spacemacs/set-leader-keys "bc" 'save-and-close-buffer)
 
   (setq scroll-conservatively 101
@@ -612,7 +614,7 @@ you should place your code here."
   ;; search and replace in visual mode
 
   ;; org
-  (with-eval-after-load 'org (setq org-agenda-files '("~/org" "~/org/cal" "~/Sync/phone-org")))
+  (with-eval-after-load 'org (setq org-agenda-files '("~/org" "~/org/cal" "~/Sync/phone-org/")))
   (setq org-todo-keywords
         '((sequence "TODO" "|" "DONE")
           (sequence "IDEA" "|" "DONE")
@@ -647,7 +649,7 @@ you should place your code here."
       (save-excursion
         (goto-char (point-min))
         (while (re-search-forward "CALENDAR" nil t)
-	        (font-lock-prepend-text-property (line-beginning-position) (line-end-position) 'face 'org-agenda-cal-highlight-face)))))
+          (font-lock-prepend-text-property (line-beginning-position) (line-end-position) 'face 'org-agenda-cal-highlight-face)))))
   (add-hook 'org-agenda-finalize-hook #'org-agenda-highlight-cal-entry)
 
   (defface org-agenda-routine-highlight-face `((t :foreground "indian red"))
@@ -658,7 +660,7 @@ you should place your code here."
       (save-excursion
         (goto-char (point-min))
         (while (re-search-forward "routine" nil t)
-	        (font-lock-prepend-text-property (line-beginning-position) (line-end-position) 'face 'org-agenda-routine-highlight-face)))))
+          (font-lock-prepend-text-property (line-beginning-position) (line-end-position) 'face 'org-agenda-routine-highlight-face)))))
   (add-hook 'org-agenda-finalize-hook #'org-agenda-highlight-routine-entry)
 
   ;; auto-save all org buffers

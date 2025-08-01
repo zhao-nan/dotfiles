@@ -12,6 +12,7 @@ alias psa='ps -A'
 alias extr='extract '
 alias extrem='extract_and_remove '
 alias rg="rg --smart-case"
+alias rzf="rga-fzf"
 
 alias magit='ec -e "(magit-status \"$(pwd)\")"'
 alias git---="git checkout --"
