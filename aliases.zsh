@@ -175,3 +175,15 @@ function restart-signal {
   brun signal-desktop
   disown
 }
+
+crtNameRun() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: crtNameRun <ContractFile.sol>"
+    return 1
+  fi
+
+  local file="$1"
+  local name="${file%.sol}"
+
+  certoraRun.py "$file" --verify "$name:$name.spec"
+}
